@@ -1,49 +1,125 @@
-<?xml version='1.0' encoding='utf-8'?>
-<mxfile host="app.diagrams.net" modified="2026-11-01T12:00:00.000Z" agent="Codex" version="24.7.17" type="device">
-  <diagram id="kt2" name="ER logical">
-    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1700" pageHeight="1280" math="0" shadow="0">
+<mxfile host="app.diagrams.net" agent="Codex">
+  <diagram id="erlogical" name="ER logical">
+    <mxGraphModel dx="1826" dy="1174" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1800" pageHeight="1250" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="Realtor" value="&lt;b&gt;Риелтор&lt;/b&gt;&lt;br&gt;realtor_id : PK&lt;br&gt;ФИО&lt;br&gt;контакт" style="shape=table;startSize=34;container=1;collapsible=0;childLayout=stackLayout;horizontal=1;whiteSpace=wrap;html=1;rounded=1;strokeColor=#496a91;fillColor=#f8fbff;fontSize=14;" vertex="1" parent="1">
-          <mxGeometry x="80" y="100" width="335" height="172" as="geometry" />
+        <mxCell id="realtor" parent="1" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;align=left;spacingTop=6;spacingLeft=12;spacingRight=8;fontSize=17;fontFamily=Times New Roman;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;" value="&lt;div style=&quot;text-align:center&quot;&gt;&lt;b&gt;Realtor — риелтор&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;div&gt;PK realtor_id&lt;br&gt;full_name&lt;br&gt;contact&lt;/div&gt;" vertex="1">
+          <mxGeometry height="240" width="420" x="70" y="60" as="geometry" />
         </mxCell>
-        <mxCell id="Property" value="&lt;b&gt;Объект недвижимости&lt;/b&gt;&lt;br&gt;property_id : PK&lt;br&gt;realtor_id : FK&lt;br&gt;адрес&lt;br&gt;тип объекта" style="shape=table;startSize=34;container=1;collapsible=0;childLayout=stackLayout;horizontal=1;whiteSpace=wrap;html=1;rounded=1;strokeColor=#496a91;fillColor=#f8fbff;fontSize=14;" vertex="1" parent="1">
-          <mxGeometry x="470" y="100" width="335" height="210" as="geometry" />
+        <mxCell id="property" parent="1" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;align=left;spacingTop=6;spacingLeft=12;spacingRight=8;fontSize=17;fontFamily=Times New Roman;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;" value="&lt;div style=&quot;text-align:center&quot;&gt;&lt;b&gt;Property — объект&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;div&gt;PK property_id&lt;br&gt;FK realtor_id&lt;br&gt;address&lt;br&gt;property_type&lt;/div&gt;" vertex="1">
+          <mxGeometry height="240" width="420" x="670" y="60" as="geometry" />
         </mxCell>
-        <mxCell id="Room" value="&lt;b&gt;Помещение&lt;/b&gt;&lt;br&gt;room_id : PK&lt;br&gt;property_id : FK&lt;br&gt;название&lt;br&gt;этаж" style="shape=table;startSize=34;container=1;collapsible=0;childLayout=stackLayout;horizontal=1;whiteSpace=wrap;html=1;rounded=1;strokeColor=#496a91;fillColor=#f8fbff;fontSize=14;" vertex="1" parent="1">
-          <mxGeometry x="860" y="100" width="335" height="210" as="geometry" />
+        <mxCell id="operator" parent="1" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;align=left;spacingTop=6;spacingLeft=12;spacingRight=8;fontSize=17;fontFamily=Times New Roman;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;" value="&lt;div style=&quot;text-align:center&quot;&gt;&lt;b&gt;Operator — оператор&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;div&gt;PK operator_id&lt;br&gt;full_name&lt;br&gt;login&lt;/div&gt;" vertex="1">
+          <mxGeometry height="240" width="420" x="1270" y="60" as="geometry" />
         </mxCell>
-        <mxCell id="Panorama" value="&lt;b&gt;Панорама 360°&lt;/b&gt;&lt;br&gt;panorama_id : PK&lt;br&gt;property_id : FK&lt;br&gt;имя файла&lt;br&gt;ссылка на файл&lt;br&gt;подсказка по помещению" style="shape=table;startSize=34;container=1;collapsible=0;childLayout=stackLayout;horizontal=1;whiteSpace=wrap;html=1;rounded=1;strokeColor=#496a91;fillColor=#f8fbff;fontSize=14;" vertex="1" parent="1">
-          <mxGeometry x="1250" y="100" width="335" height="248" as="geometry" />
+        <mxCell id="room" parent="1" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;align=left;spacingTop=6;spacingLeft=12;spacingRight=8;fontSize=17;fontFamily=Times New Roman;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;" value="&lt;div style=&quot;text-align:center&quot;&gt;&lt;b&gt;Room — помещение&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;div&gt;PK room_id&lt;br&gt;FK property_id&lt;br&gt;name&lt;br&gt;floor&lt;/div&gt;" vertex="1">
+          <mxGeometry height="240" width="420" x="70" y="420" as="geometry" />
         </mxCell>
-        <mxCell id="Operator" value="&lt;b&gt;Оператор&lt;/b&gt;&lt;br&gt;operator_id : PK&lt;br&gt;ФИО&lt;br&gt;логин" style="shape=table;startSize=34;container=1;collapsible=0;childLayout=stackLayout;horizontal=1;whiteSpace=wrap;html=1;rounded=1;strokeColor=#496a91;fillColor=#f8fbff;fontSize=14;" vertex="1" parent="1">
-          <mxGeometry x="80" y="490" width="335" height="172" as="geometry" />
+        <mxCell id="tour" parent="1" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;align=left;spacingTop=6;spacingLeft=12;spacingRight=8;fontSize=17;fontFamily=Times New Roman;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;" value="&lt;div style=&quot;text-align:center&quot;&gt;&lt;b&gt;Tour — тур&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;div&gt;PK tour_id&lt;br&gt;FK property_id, operator_id&lt;br&gt;status&lt;br&gt;created_at&lt;/div&gt;" vertex="1">
+          <mxGeometry height="240" width="420" x="670" y="420" as="geometry" />
         </mxCell>
-        <mxCell id="Tour" value="&lt;b&gt;Тур&lt;/b&gt;&lt;br&gt;tour_id : PK&lt;br&gt;property_id : FK&lt;br&gt;operator_id : FK&lt;br&gt;статус&lt;br&gt;дата создания" style="shape=table;startSize=34;container=1;collapsible=0;childLayout=stackLayout;horizontal=1;whiteSpace=wrap;html=1;rounded=1;strokeColor=#496a91;fillColor=#f8fbff;fontSize=14;" vertex="1" parent="1">
-          <mxGeometry x="470" y="490" width="335" height="248" as="geometry" />
+        <mxCell id="panorama" parent="1" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;align=left;spacingTop=6;spacingLeft=12;spacingRight=8;fontSize=17;fontFamily=Times New Roman;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;" value="&lt;div style=&quot;text-align:center&quot;&gt;&lt;b&gt;Panorama — панорама&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;div&gt;PK panorama_id&lt;br&gt;FK property_id&lt;br&gt;file_name&lt;br&gt;file_url&lt;br&gt;room_hint&lt;/div&gt;" vertex="1">
+          <mxGeometry height="240" width="420" x="1300" y="700" as="geometry" />
         </mxCell>
-        <mxCell id="Scene" value="&lt;b&gt;Сцена тура&lt;/b&gt;&lt;br&gt;scene_id : PK&lt;br&gt;tour_id : FK&lt;br&gt;room_id : FK&lt;br&gt;panorama_id : FK&lt;br&gt;название&lt;br&gt;порядок&lt;br&gt;стартовая?" style="shape=table;startSize=34;container=1;collapsible=0;childLayout=stackLayout;horizontal=1;whiteSpace=wrap;html=1;rounded=1;strokeColor=#496a91;fillColor=#f8fbff;fontSize=14;" vertex="1" parent="1">
-          <mxGeometry x="860" y="490" width="335" height="324" as="geometry" />
+        <mxCell id="transition" parent="1" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;align=left;spacingTop=6;spacingLeft=12;spacingRight=8;fontSize=17;fontFamily=Times New Roman;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;" value="&lt;div style=&quot;text-align:center&quot;&gt;&lt;b&gt;Transition — переход&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;div&gt;PK transition_id&lt;br&gt;FK tour_id&lt;br&gt;FK from_scene_id&lt;br&gt;FK to_scene_id&lt;br&gt;label&lt;/div&gt;" vertex="1">
+          <mxGeometry height="240" width="420" x="70" y="780" as="geometry" />
         </mxCell>
-        <mxCell id="Transition" value="&lt;b&gt;Переход&lt;/b&gt;&lt;br&gt;transition_id : PK&lt;br&gt;tour_id : FK&lt;br&gt;from_scene_id : FK&lt;br&gt;to_scene_id : FK&lt;br&gt;подпись перехода" style="shape=table;startSize=34;container=1;collapsible=0;childLayout=stackLayout;horizontal=1;whiteSpace=wrap;html=1;rounded=1;strokeColor=#496a91;fillColor=#f8fbff;fontSize=14;" vertex="1" parent="1">
-          <mxGeometry x="1250" y="490" width="335" height="248" as="geometry" />
+        <mxCell id="scene" parent="1" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;align=left;spacingTop=6;spacingLeft=12;spacingRight=8;fontSize=17;fontFamily=Times New Roman;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;" value="&lt;div style=&quot;text-align:center&quot;&gt;&lt;b&gt;Scene — сцена&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;div&gt;PK scene_id&lt;br&gt;FK tour_id, room_id, panorama_id&lt;br&gt;name&lt;br&gt;order_index&lt;br&gt;is_start&lt;/div&gt;" vertex="1">
+          <mxGeometry height="240" width="420" x="670" y="780" as="geometry" />
         </mxCell>
-        <mxCell id="TourVersion" value="&lt;b&gt;Версия тура&lt;/b&gt;&lt;br&gt;version_id : PK&lt;br&gt;tour_id : FK&lt;br&gt;номер версии&lt;br&gt;URL&lt;br&gt;дата публикации" style="shape=table;startSize=34;container=1;collapsible=0;childLayout=stackLayout;horizontal=1;whiteSpace=wrap;html=1;rounded=1;strokeColor=#496a91;fillColor=#f8fbff;fontSize=14;" vertex="1" parent="1">
-          <mxGeometry x="470" y="880" width="335" height="248" as="geometry" />
+        <mxCell id="version" parent="1" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;align=left;spacingTop=6;spacingLeft=12;spacingRight=8;fontSize=17;fontFamily=Times New Roman;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;" value="&lt;div style=&quot;text-align:center&quot;&gt;&lt;b&gt;TourVersion — версия&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;div&gt;PK version_id&lt;br&gt;FK tour_id&lt;br&gt;version_number&lt;br&gt;url&lt;br&gt;published_at&lt;/div&gt;" vertex="1">
+          <mxGeometry height="240" width="420" x="1270" y="350" as="geometry" />
         </mxCell>
-        <mxCell id="R1" value="1 : N · владеет" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=ERmany;startArrow=ERone;endFill=0;startFill=0;strokeColor=#64748b;fontSize=12;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="Realtor" target="Property" />
-        <mxCell id="R2" value="1 : N · содержит" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=ERmany;startArrow=ERone;endFill=0;startFill=0;strokeColor=#64748b;fontSize=12;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="Property" target="Room" />
-        <mxCell id="R3" value="1 : N · имеет файлы" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=ERmany;startArrow=ERone;endFill=0;startFill=0;strokeColor=#64748b;fontSize=12;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="Property" target="Panorama" />
-        <mxCell id="R4" value="1 : N · туры объекта" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=ERmany;startArrow=ERone;endFill=0;startFill=0;strokeColor=#64748b;fontSize=12;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="Property" target="Tour" />
-        <mxCell id="R5" value="1 : N · создаёт" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=ERmany;startArrow=ERone;endFill=0;startFill=0;strokeColor=#64748b;fontSize=12;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="Operator" target="Tour" />
-        <mxCell id="R6" value="1 : N · включает" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=ERmany;startArrow=ERone;endFill=0;startFill=0;strokeColor=#64748b;fontSize=12;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="Tour" target="Scene" />
-        <mxCell id="R7" value="1 : N · показывается сценами" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=ERmany;startArrow=ERone;endFill=0;startFill=0;strokeColor=#64748b;fontSize=12;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="Room" target="Scene" />
-        <mxCell id="R8" value="1 : N · используется" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=ERmany;startArrow=ERone;endFill=0;startFill=0;strokeColor=#64748b;fontSize=12;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="Panorama" target="Scene" />
-        <mxCell id="R9" value="1 : N · связи тура" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=ERmany;startArrow=ERone;endFill=0;startFill=0;strokeColor=#64748b;fontSize=12;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="Tour" target="Transition" />
-        <mxCell id="R10" value="1 : N · публикации" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=ERmany;startArrow=ERone;endFill=0;startFill=0;strokeColor=#64748b;fontSize=12;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="Tour" target="TourVersion" />
-        <mxCell id="R11" value="1 : N · исходящая сцена" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=ERmany;startArrow=ERone;endFill=0;startFill=0;strokeColor=#64748b;fontSize=12;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="Scene" target="Transition" />
-        <mxCell id="R12" value="1 : N · целевая сцена" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=ERmany;startArrow=ERone;endFill=0;startFill=0;strokeColor=#64748b;fontSize=12;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="Scene" target="Transition" />
+        <mxCell id="rel0" edge="1" parent="1" source="realtor" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;startArrow=ERmandOne;startFill=0;startSize=16;endArrow=ERzeroToMany;endFill=0;endSize=18;exitX=1.0;exitY=0.5;entryX=0.0;entryY=0.5;" target="property" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel1" edge="1" parent="1" source="property" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;startArrow=ERmandOne;startFill=0;startSize=16;endArrow=ERzeroToMany;endFill=0;endSize=18;exitX=0.5;exitY=1.0;entryX=0.5;entryY=0.0;" target="tour" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel2" edge="1" parent="1" source="property" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;startArrow=ERmandOne;startFill=0;startSize=16;endArrow=ERzeroToMany;endFill=0;endSize=18;exitX=0.0;exitY=0.75;entryX=1.0;entryY=0.5;" target="room" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="590" y="240" />
+              <mxPoint x="590" y="540" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel3" edge="1" parent="1" source="property" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;startArrow=ERmandOne;startFill=0;startSize=16;endArrow=ERzeroToMany;endFill=0;endSize=18;exitX=1.0;exitY=0.5;entryX=0.0;entryY=0.5;" target="panorama" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1140" y="180" />
+              <mxPoint x="1140" y="820" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel4" edge="1" parent="1" source="operator" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;startArrow=ERmandOne;startFill=0;startSize=16;endArrow=ERzeroToMany;endFill=0;endSize=18;exitX=0.0;exitY=0.8333333333333334;entryX=0.8333333333333334;entryY=0.0;" target="tour" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1200" y="260" />
+              <mxPoint x="1200" y="330" />
+              <mxPoint x="1020" y="330" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel5" edge="1" parent="1" source="tour" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;startArrow=ERmandOne;startFill=0;startSize=16;endArrow=ERzeroToMany;endFill=0;endSize=18;exitX=0.5;exitY=1.0;entryX=0.5;entryY=0.0;" target="scene" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel6" edge="1" parent="1" source="room" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;startArrow=ERmandOne;startFill=0;startSize=16;endArrow=ERzeroToMany;endFill=0;endSize=18;exitX=0.5;exitY=1.0;entryX=0.0;entryY=0.5;" target="scene" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="280" y="730" />
+              <mxPoint x="620" y="730" />
+              <mxPoint x="620" y="900" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel7" edge="1" parent="1" source="panorama" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;startArrow=ERmandOne;startFill=0;startSize=16;endArrow=ERzeroToMany;endFill=0;endSize=18;exitX=0.0;exitY=0.75;entryX=1.0;entryY=0.5833333333333334;" target="scene" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1180" y="880" />
+              <mxPoint x="1180" y="920" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel8" edge="1" parent="1" source="tour" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;startArrow=ERmandOne;startFill=0;startSize=16;endArrow=ERzeroToMany;endFill=0;endSize=18;exitX=0.0;exitY=0.75;entryX=1.0;entryY=0.5;" target="transition" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="560" y="600" />
+              <mxPoint x="560" y="900" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel9" edge="1" parent="1" source="scene" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;startArrow=ERmandOne;startFill=0;startSize=16;endArrow=ERzeroToMany;endFill=0;endSize=18;exitX=0.0;exitY=0.25;entryX=1.0;entryY=0.25;" target="transition" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel10" edge="1" parent="1" source="scene" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;startArrow=ERmandOne;startFill=0;startSize=16;endArrow=ERzeroToMany;endFill=0;endSize=18;exitX=0.0;exitY=0.75;entryX=1.0;entryY=0.75;" target="transition" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel11" edge="1" parent="1" source="tour" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;startArrow=ERmandOne;startFill=0;startSize=16;endArrow=ERzeroToMany;endFill=0;endSize=18;exitX=1.0;exitY=0.7083333333333334;" target="version" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1210" y="590" />
+              <mxPoint x="1210" y="520" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="note0" parent="1" style="text;html=1;align=center;verticalAlign=middle;fontSize=17;fontFamily=Times New Roman;fontColor=#000000;" value="Notation:  || = exactly one;  O&lt; = zero or many." vertex="1">
+          <mxGeometry height="32" width="1440" x="180" y="1080" as="geometry" />
+        </mxCell>
+        <mxCell id="note1" parent="1" style="text;html=1;align=center;verticalAlign=middle;fontSize=17;fontFamily=Times New Roman;fontColor=#000000;" value="Transition associates Scene with Scene through from_scene_id and to_scene_id (M:N)." vertex="1">
+          <mxGeometry height="32" width="1440" x="180" y="1120" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>

@@ -6,6 +6,10 @@ __pycache__/
 Thumbs.db
 tmp/
 build/
+*.class
+target/
+out/
+/src/java/result.json
 vcs/
 *_КТ1.zip
 

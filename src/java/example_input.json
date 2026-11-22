@@ -1,0 +1,72 @@
+{
+  "property_id": 101,
+  "operator_id": 7,
+  "rooms": [
+    {
+      "room_id": 1,
+      "property_id": 101,
+      "name": "Кухня",
+      "synonyms": [
+        "кухонная зона"
+      ]
+    },
+    {
+      "room_id": 2,
+      "property_id": 101,
+      "name": "Гостиная",
+      "synonyms": [
+        "зал"
+      ]
+    },
+    {
+      "room_id": 3,
+      "property_id": 101,
+      "name": "Спальня",
+      "synonyms": [
+        "спальная комната"
+      ]
+    }
+  ],
+  "panoramas": [
+    {
+      "panorama_id": 11,
+      "property_id": 101,
+      "file_name": "kitchen.jpg",
+      "room_hint": "кухня",
+      "file_uri": "panoramas/kitchen.jpg"
+    },
+    {
+      "panorama_id": 12,
+      "property_id": 101,
+      "file_name": "living.jpg",
+      "room_hint": "зал",
+      "file_uri": "panoramas/living.jpg"
+    },
+    {
+      "panorama_id": 13,
+      "property_id": 101,
+      "file_name": "bedroom.jpg",
+      "room_hint": "спальная комната",
+      "file_uri": "panoramas/bedroom.jpg"
+    }
+  ],
+  "tours": [],
+  "scenes": [],
+  "transitions": [
+    {
+      "tour_id": 1,
+      "label": "В гостиную",
+      "to_scene_id": 2,
+      "from_scene_id": 1,
+      "transition_id": 1
+    },
+    {
+      "tour_id": 1,
+      "label": "В спальню",
+      "to_scene_id": 3,
+      "from_scene_id": 2,
+      "transition_id": 2
+    }
+  ],
+  "versions": []
+}

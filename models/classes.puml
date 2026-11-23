@@ -1,0 +1,212 @@
+@startuml classes
+title
+Диаграмма классов UML — виртуальный тур по объекту недвижимости
+КТ3 · ООП-реализация на Java
+end title
+
+skinparam defaultFontName "Segoe UI"
+skinparam defaultFontSize 15
+skinparam TitleFontSize 19
+skinparam shadowing false
+skinparam backgroundColor #FFFFFF
+skinparam defaultFontColor #172335
+skinparam ArrowColor #526479
+skinparam ArrowFontColor #354B60
+skinparam ClassAttributeIconSize 0
+skinparam stereotypeCBackgroundColor #E7EDF4
+skinparam nodesep 78
+skinparam ranksep 52
+skinparam linetype polyline
+skinparam packageStyle rectangle
+skinparam PackageBorderColor #C4CFDB
+skinparam PackageBackgroundColor #F6F8FB
+skinparam ClassBorderColor #708398
+skinparam ClassBackgroundColor #FFFFFF
+skinparam ClassFontColor #17334B
+hide circle
+hide empty fields
+
+package tour {
+    class Main #E9EEF6 {
+        - Main()
+        + {static} main(args : String[]) : void
+        - {static} run(args : String[]) : void
+    }
+
+    class TourJson #E9EEF6 {
+        - gson : Gson
+        ~ read(path : Path) : TourWorkflow.Input
+        ~ write(path : Path, result : TourWorkflow.Result) : void
+    }
+
+    class TourWorkflow #E9EEF6 {
+        - matcher : RoomMatcher
+        ~ run(input : Input) : Result
+    }
+
+    class Property <<record>> #E9F4F1 {
+        - propertyId : Long
+        + propertyId() : Long
+    }
+
+    class Operator <<record>> #E9F4F1 {
+        - operatorId : Long
+        + operatorId() : Long
+    }
+
+    class Tour #E9F4F1 {
+        - {static} PUBLISHED_AT : DateTimeFormatter
+        - tourId : long
+        - property : Property
+        - operator : Operator
+        - graph : TourGraph
+        - scenes : List<Scene>
+        - status : String
+        ~ {static} draft(List<Snapshot>, Property, Operator) : Tour
+        ~ loadScenes(List<Panorama>, List<Scene>, Map<Long, Long>) : void
+        ~ scenes() : List<Scene>
+        - validate(List<Scene>, List<Transition>, List<Panorama>) : TourGraph.Validation
+        ~ publish(List<Scene>, List<Transition>, List<Panorama>, List<TourVersion>) : Publication
+        ~ snapshot() : Snapshot
+        - {static} idOrZero(id : Long) : long
+        - {static} nextId(previous : long) : long
+    }
+
+    class Room <<record>> #E9F4F1 {
+        - roomId : Long
+        - propertyId : Long
+        - name : String
+        - synonyms : List<String>
+        + roomId() : Long
+        + propertyId() : Long
+        + name() : String
+        + synonyms() : List<String>
+    }
+
+    abstract class Panorama #E9F4F1 {
+        - panoramaId : Long
+        - propertyId : Long
+        - fileName : String
+        ~ {static} create(Long, Long, String, String) : Panorama
+        ~ panoramaId() : Long
+        ~ propertyId() : Long
+        ~ fileName() : String
+        ~ {abstract} sceneName() : String
+    }
+
+    class "Panorama.Hinted" as Hinted #E9F4F1 {
+        - roomHint : String
+        ~ sceneName() : String
+    }
+
+    class "Panorama.FromFile" as FromFile #E9F4F1 {
+        ~ sceneName() : String
+    }
+
+    class Scene <<record>> #E9F4F1 {
+        - sceneId : Long
+        - tourId : Long
+        - roomId : Long
+        - panoramaId : Long
+        - name : String
+        - orderIndex : Integer
+        - isStart : Boolean
+        + sceneId() : Long
+        + tourId() : Long
+        + roomId() : Long
+        + panoramaId() : Long
+        + name() : String
+        + orderIndex() : Integer
+        + isStart() : Boolean
+    }
+
+    class Transition <<record>> #E9F4F1 {
+        - transitionId : Long
+        - tourId : Long
+        - fromSceneId : Long
+        - toSceneId : Long
+        - label : String
+        + transitionId() : Long
+        + tourId() : Long
+        + fromSceneId() : Long
+        + toSceneId() : Long
+        + label() : String
+    }
+
+    class TourVersion <<record>> #E9F4F1 {
+        - versionId : Long
+        - tourId : Long
+        - versionNumber : Long
+        - url : String
+        - publishedAt : String
+        + versionId() : Long
+        + tourId() : Long
+        + versionNumber() : Long
+        + url() : String
+        + publishedAt() : String
+    }
+
+    class TourGraph #F5ECDF {
+        ~ validate(List<Scene>, List<Transition>, List<Panorama>, long, long) : Validation
+        - reachableFrom(adjacent : Map<Long, List<Long>>, startSceneId : long) : Set<Long>
+        - {static} displayId(id : Long) : String
+    }
+
+    class RoomMatcher #F5ECDF {
+        - {static} EXTENSION : Pattern
+        - {static} WORD : Pattern
+        - rules : List<MatchingRule>
+        ~ suggest(panoramas : List<Panorama>, rooms : List<Room>) : List<Suggestion>
+        - suggestOne(panorama : Panorama, rooms : List<PreparedRoom>) : Suggestion
+        - score(name : String, room : PreparedRoom) : int
+        - {static} normalize(value : String) : String
+    }
+
+    interface "RoomMatcher.MatchingRule" as MatchingRule <<interface>> #F5ECDF {
+        + score(panoramaName : String, room : PreparedRoom) : int
+    }
+
+    class "RoomMatcher.ExactNameRule" as ExactNameRule #F5ECDF {
+        + score(panoramaName : String, room : PreparedRoom) : int
+    }
+
+    class "RoomMatcher.SynonymRule" as SynonymRule #F5ECDF {
+        + score(panoramaName : String, room : PreparedRoom) : int
+    }
+
+    Main -[dashed]right-> TourJson
+    Main -[dashed]down-> TourWorkflow
+    TourJson -[dashed,norank]-> TourWorkflow : Input, Result
+    TourWorkflow ..> Tour : «create»
+    TourWorkflow --> RoomMatcher : matcher
+    Tour "0..*" -[norank]-> "1" Property : property
+    Tour "0..*" -up-> "1" Operator : operator
+    Tour "1" *-down- "0..*" Scene : scenes
+    Tour "1" -down- "0..*" Transition : tourId
+    Tour "1" -right- "0..*" TourVersion : tourId
+    Tour -up-> TourGraph : graph
+    Property "1" -right- "0..*" Room : propertyId
+    Property "1" -[norank]- "0..*" Panorama : propertyId
+    Scene "0..*" -left-> "0..1" Room : roomId
+    Scene "0..*" -down-> "1" Panorama : panoramaId
+    Transition "0..*" -left-> "1" Scene : fromSceneId
+    Transition "0..*" -left-> "1" Scene : toSceneId
+    Panorama <|-- Hinted
+    Panorama <|-- FromFile
+    RoomMatcher "1" *-- "2" MatchingRule : rules
+    MatchingRule <|.. ExactNameRule
+    MatchingRule <|.. SynonymRule
+
+    TourVersion -[hidden]right- RoomMatcher
+    Operator -[hidden]right- TourGraph
+    TourGraph -[hidden]right- TourWorkflow
+}
+
+legend bottom left
+  |= Обозначения |= Значение |
+  | +, -, ~ | public, private, доступ в пакете |
+  | Поля вида ...Id | Связи по идентификаторам в данных |
+  | Вложенные записи | Указаны в сигнатурах методов |
+  | Realtor (КТ2) | Сущность логической модели за пределами Java-сценария |
+endlegend
+@enduml

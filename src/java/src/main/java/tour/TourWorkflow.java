@@ -3,12 +3,17 @@ package tour;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Objects;
 
 final class TourWorkflow {
     private final RoomMatcher matcher = new RoomMatcher();
 
     Result run(Input input) {
-        List<RoomMatcher.Suggestion> suggestions = matcher.suggest(input.panoramas(), input.rooms());
+        Long propertyId = input.property().propertyId();
+        List<Room> roomsForProperty = input.rooms().stream()
+                .filter(room -> Objects.equals(room.propertyId(), propertyId))
+                .toList();
+        List<RoomMatcher.Suggestion> suggestions = matcher.suggest(input.panoramas(), roomsForProperty);
         Map<Long, Long> roomByPanorama = new HashMap<>();
         for (RoomMatcher.Suggestion suggestion : suggestions) {
             if (suggestion.status().equals("suggested")) {

@@ -18,12 +18,16 @@ def run(input_path, output_path):
     scenes = data.setdefault("scenes", [])
     transitions = data.setdefault("transitions", [])
     versions = data.setdefault("versions", [])
-    suggestions = suggest_room_matches(data["panoramas"], data["rooms"])
+    property_id = data["property_id"]
+    rooms_for_property = [
+        room for room in data["rooms"] if room.get("property_id") == property_id
+    ]
+    suggestions = suggest_room_matches(data["panoramas"], rooms_for_property)
     room_by_panorama = {item["panorama_id"]: item["room_id"] for item in suggestions
                         if item["status"] == "suggested"}
-    tour = create_tour_draft(tours, data["property_id"], data["operator_id"])
+    tour = create_tour_draft(tours, property_id, data["operator_id"])
     created = load_panorama_scenes(data["panoramas"], scenes, tour["tour_id"],
-                                   data["property_id"], room_by_panorama)
+                                   property_id, room_by_panorama)
     if not created:
         raise ValueError("Для тура нужна хотя бы одна панорама")
     start_scene_id = created[0]["scene_id"]

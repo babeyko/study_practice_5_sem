@@ -1,0 +1,668 @@
+<mxfile host="app.diagrams.net" compressed="false">
+  <diagram id="classes-tour" name="Диаграмма классов">
+    <mxGraphModel dx="2829" dy="1819" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="0" page="1" pageScale="1" pageWidth="1626" pageHeight="1815" background="#FFFFFF" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="package-tour" connectable="0" parent="1" style="rounded=0;fillColor=#F6F8FB;strokeColor=#C4CFDB;strokeWidth=1.5;movable=0;resizable=0;rotation=0;" value="" vertex="1">
+          <mxGeometry height="1593" width="1613" x="7" y="78.543" as="geometry" />
+        </mxCell>
+        <mxCell id="package-name" connectable="0" parent="1" style="text;html=1;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;verticalAlign=middle;spacing=0;fontFamily=Segoe UI;fontSize=15;fontColor=#172335;align=left;" value="&lt;b&gt;tour&lt;/b&gt;" vertex="1">
+          <mxGeometry height="18.75" width="33.051" x="798.474" y="82.63" as="geometry" />
+        </mxCell>
+        <mxCell id="Main" parent="1" style="swimlane;fontFamily=Segoe UI;fontSize=15;fontColor=#172335;html=1;horizontal=1;startSize=29.951;rounded=0;collapsible=0;align=center;verticalAlign=middle;spacing=0;fillColor=#E9EEF6;swimlaneFillColor=#FFFFFF;strokeColor=#708398;strokeWidth=1;whiteSpace=nowrap;" value="Main" vertex="1">
+          <mxGeometry height="97.805" width="191.685" x="932" y="120.543" as="geometry" />
+        </mxCell>
+        <mxCell id="Main-member-1" connectable="0" parent="Main" style="text;html=1;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;verticalAlign=middle;spacing=0;fontFamily=Segoe UI;fontSize=15;fontColor=#172335;align=left;" value="-Main()" vertex="1">
+          <mxGeometry height="18.75" width="52.274" x="6" y="36.038" as="geometry" />
+        </mxCell>
+        <mxCell id="Main-member-2" connectable="0" parent="Main" style="text;html=1;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;verticalAlign=middle;spacing=0;fontFamily=Segoe UI;fontSize=15;fontColor=#172335;align=left;" value="&lt;u&gt;+main(args : String[]) : void&lt;/u&gt;" vertex="1">
+          <mxGeometry height="18.75" width="183.685" x="6" y="55.989" as="geometry" />
+        </mxCell>
+        <mxCell id="Main-member-3" connectable="0" parent="Main" style="text;html=1;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;verticalAlign=middle;spacing=0;fontFamily=Segoe UI;fontSize=15;fontColor=#172335;align=left;" value="&lt;u&gt;-run(args : String[]) : void&lt;/u&gt;" vertex="1">
+          <mxGeometry height="18.75" width="168.941" x="6" y="75.94" as="geometry" />
+        </mxCell>
+        <mxCell id="TourJson" parent="1" style="swimlane;fontFamily=Segoe UI;fontSize=15;fontColor=#172335;html=1;horizontal=1;startSize=29.951;rounded=0;collapsible=0;align=center;verticalAlign=middle;spacing=0;fillColor=#E9EEF6;swimlaneFillColor=#FFFFFF;strokeColor=#708398;strokeWidth=1;whiteSpace=nowrap;" value="TourJson" vertex="1">
+          <mxGeometry height="105.805" width="367.81" x="1202" y="116.543" as="geometry" />
+        </mxCell>
+        <mxCell id="TourJson-member-1" connectable="0" parent="TourJson" style="text;html=1;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;verticalAlign=middle;spacing=0;fontFamily=Segoe UI;fontSize=15;fontColor=#172335;align=left;" value="-gson : Gson" vertex="1">
+          <mxGeometry height="18.75" width="87.877" x="6" y="36.038" as="geometry" />
+        </mxCell>
+        <mxCell id="TourJson-member-2" connectable="0" parent="TourJson" style="text;html=1;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;verticalAlign=middle;spacing=0;fontFamily=Segoe UI;fontSize=15;fontColor=#172335;align=left;" value="~read(path : Path) : TourWorkflow.Input" vertex="1">
+          <mxGeometry height="18.75" width="267.306" x="6" y="63.989" as="geometry" />
+        </mxCell>
+        <mxCell id="TourJson-member-3" connectable="0" parent="TourJson" style="text;html=1;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;verticalAlign=middle;spacing=0;fontFamily=Segoe UI;fontSize=15;fontColor=#172335;align=left;" value="~write(path : Path, result : TourWorkflow.Result) : void" vertex="1">
+          <mxGeometry height="18.75" width="359.81" x="6" y="83.94" as="geometry" />
+        </mxCell>
+        <mxCell id="TourJson-divider-1" connectable="0" parent="TourJson" style="line;strokeColor=#708398;strokeWidth=1;direction=east;movable=0;" value="" vertex="1">
+          <mxGeometry height="1" width="367.81" y="57.902" as="geometry" />
+        </mxCell>
+        <mxCell id="TourWorkflow" parent="1" style="swimlane;fontFamily=Segoe UI;fontSize=15;fontColor=#172335;html=1;horizontal=1;startSize=29.951;rounded=0;collapsible=0;align=center;verticalAlign=middle;spacing=0;fillColor=#E9EEF6;swimlaneFillColor=#FFFFFF;strokeColor=#708398;strokeWidth=1;whiteSpace=nowrap;" value="TourWorkflow" vertex="1">
+          <mxGeometry height="85.853" width="186.214" x="935" y="305.543" as="geometry" />
+        </mxCell>
+        <mxCell id="TourWorkflow-member-1" connectable="0" parent="TourWorkflow" style="text;html=1;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;verticalAlign=middle;spacing=0;fontFamily=Segoe UI;fontSize=15;fontColor=#172335;align=left;" value="-matcher : RoomMatcher" vertex="1">
+          <mxGeometry height="18.75" width="169.71" x="6" y="36.038" as="geometry" />
+        </mxCell>
+        <mxCell id="TourWorkflow-member-2" connectable="0" parent="TourWorkflow" style="text;html=1;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;verticalAlign=middle;spacing=0;fontFamily=Segoe UI;fontSize=15;fontColor=#172335;align=left;" value="~run(input : Input) : Result" vertex="1">
+          <mxGeometry height="18.75" width="178.214" x="6" y="63.989" as="geometry" />
+        </mxCell>
+        <mxCell id="TourWorkflow-divider-1" connectable="0" parent="TourWorkflow" style="line;strokeColor=#708398;strokeWidth=1;direction=east;movable=0;" value="" vertex="1">
+          <mxGeometry height="1" width="186.214" y="57.902" as="geometry" />
+        </mxCell>
+        <mxCell id="Property" parent="1" style="swimlane;fontFamily=Segoe UI;fontSize=15;fontColor=#172335;html=1;horizontal=1;startSize=49.902;rounded=0;collapsible=0;align=center;verticalAlign=middle;spacing=0;fillColor=#E9F4F1;swimlaneFillColor=#FFFFFF;strokeColor=#708398;strokeWidth=1;whiteSpace=nowrap;" value="&lt;i&gt;«record»&lt;/i&gt;&lt;br&gt;Property" vertex="1">
+          <mxGeometry height="105.805" width="145.821" x="23" y="1012.043" as="geometry" />
+        </mxCell>
+        <mxCell id="Property-member-1" connectable="0" parent="Property" style="text;html=1;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;verticalAlign=middle;spacing=0;fontFamily=Segoe UI;fontSize=15;fontColor=#172335;align=left;" value="-propertyId : Long" vertex="1">
+          <mxGeometry height="18.75" width="124.505" x="6" y="55.989" as="geometry" />
+        </mxCell>
+        <mxCell id="Property-member-2" connectable="0" parent="Property" style="text;html=1;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;verticalAlign=middle;spacing=0;fontFamily=Segoe UI;fontSize=15;fontColor=#172335;align=left;" value="+propertyId() : Long" vertex="1">
+          <mxGeometry height="18.75" width="137.821" x="6" y="83.94" as="geometry" />
+        </mxCell>
+        <mxCell id="Property-divider-1" connectable="0" parent="Property" style="line;strokeColor=#708398;strokeWidth=1;direction=east;movable=0;" value="" vertex="1">
+          <mxGeometry height="1" width="145.821" y="77.854" as="geometry" />
+        </mxCell>
+        <mxCell id="Operator" parent="1" style="swimlane;fontFamily=Segoe UI;fontSize=15;fontColor=#172335;html=1;horizontal=1;startSize=49.902;rounded=0;collapsible=0;align=center;verticalAlign=middle;spacing=0;fillColor=#E9F4F1;swimlaneFillColor=#FFFFFF;strokeColor=#708398;strokeWidth=1;whiteSpace=nowrap;" value="&lt;i&gt;«record»&lt;/i&gt;&lt;br&gt;Operator" vertex="1">
+          <mxGeometry height="105.805" width="146.165" x="57" y="295.543" as="geometry" />
+        </mxCell>
+        <mxCell id="Operator-member-1" connectable="0" parent="Operator" style="text;html=1;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;verticalAlign=middle;spacing=0;fontFamily=Segoe UI;fontSize=15;fontColor=#172335;align=left;" value="-operatorId : Long" vertex="1">
+          <mxGeometry height="18.75" width="124.85" x="6" y="55.989" as="geometry" />
+        </mxCell>
+        <mxCell id="Operator-member-2" connectable="0" parent="Operator" style="text;html=1;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;verticalAlign=middle;spacing=0;fontFamily=Segoe UI;fontSize=15;fontColor=#172335;align=left;" value="+operatorId() : Long" vertex="1">
+          <mxGeometry height="18.75" width="138.165" x="6" y="83.94" as="geometry" />
+        </mxCell>
+        <mxCell id="Operator-divider-1" connectable="0" parent="Operator" style="line;strokeColor=#708398;strokeWidth=1;direction=east;movable=0;" value="" vertex="1">
+          <mxGeometry height="1" width="146.165" y="77.853" as="geometry" />
+        </mxCell>
+        <mxCell id="Tour" parent="1" style="swimlane;fontFamily=Segoe UI;fontSize=15;fontColor=#172335;html=1;horizontal=1;startSize=29.951;rounded=0;collapsible=0;align=center;verticalAlign=middle;spacing=0;fillColor=#E9F4F1;swimlaneFillColor=#FFFFFF;strokeColor=#708398;strokeWidth=1;whiteSpace=nowrap;" value="Tour" vertex="1">
+          <mxGeometry height="345.219" width="608.265" x="70" y="474.543" as="geometry" />
+        </mxCell>
+        <mxCell id="Tour-member-1" connectable="0" parent="Tour" style="text;html=1;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;verticalAlign=middle;spacing=0;fontFamily=Segoe UI;fontSize=15;fontColor=#172335;align=left;" value="&lt;u&gt;-PUBLISHED_AT : DateTimeFormatter&lt;/u&gt;" vertex="1">
+          <mxGeometry height="18.75" width="248.746" x="6" y="36.038" as="geometry" />
+        </mxCell>
+        <mxCell id="Tour-member-2" connectable="0" parent="Tour" style="text;html=1;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;verticalAlign=middle;spacing=0;fontFamily=Segoe UI;fontSize=15;fontColor=#172335;align=left;" value="-tourId : long" vertex="1">
+          <mxGeometry height="18.75" width="91.612" x="6" y="55.989" as="geometry" />
+        </mxCell>
+        <mxCell id="Tour-member-3" connectable="0" parent="Tour" style="text;html=1;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;verticalAlign=middle;spacing=0;fontFamily=Segoe UI;fontSize=15;fontColor=#172335;align=left;" value="-property : Property" vertex="1">
+          <mxGeometry height="18.75" width="135.133" x="6" y="75.94" as="geometry" />
+        </mxCell>
+        <mxCell id="Tour-member-4" connectable="0" parent="Tour" style="text;html=1;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;verticalAlign=middle;spacing=0;fontFamily=Segoe UI;fontSize=15;fontColor=#172335;align=left;" value="-operator : Operator" vertex="1">
+          <mxGeometry height="18.75" width="138.758" x="6" y="95.891" as="geometry" />
+        </mxCell>
+        <mxCell id="Tour-member-5" connectable="0" parent="Tour" style="text;html=1;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;verticalAlign=middle;spacing=0;fontFamily=Segoe UI;fontSize=15;fontColor=#172335;align=left;" value="-graph : TourGraph" vertex="1">
+          <mxGeometry height="18.75" width="131.251" x="6" y="115.842" as="geometry" />
+        </mxCell>
+        <mxCell id="Tour-member-6" connectable="0" parent="Tour" style="text;html=1;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;verticalAlign=middle;spacing=0;fontFamily=Segoe UI;fontSize=15;fontColor=#172335;align=left;" value="-scenes : List&amp;lt;Scene&amp;gt;" vertex="1">
+          <mxGeometry height="18.75" width="147.042" x="6" y="135.793" as="geometry" />
+        </mxCell>
+        <mxCell id="Tour-member-7" connectable="0" parent="Tour" style="text;html=1;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;verticalAlign=middle;spacing=0;fontFamily=Segoe UI;fontSize=15;fontColor=#172335;align=left;" value="-status : String" vertex="1">
+          <mxGeometry height="18.75" width="99.706" x="6" y="155.745" as="geometry" />
+        </mxCell>
+        <mxCell id="Tour-member-8" connectable="0" parent="Tour" style="text;html=1;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;verticalAlign=middle;spacing=0;fontFamily=Segoe UI;fontSize=15;fontColor=#172335;align=left;" value="&lt;u&gt;~draft(List&amp;lt;Snapshot&amp;gt;, Property, Operator) : Tour&lt;/u&gt;" vertex="1">
+          <mxGeometry height="18.75" width="332.14" x="6" y="183.696" as="geometry" />
+        </mxCell>
+        <mxCell id="Tour-member-9" connectable="0" parent="Tour" style="text;html=1;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;verticalAlign=middle;spacing=0;fontFamily=Segoe UI;fontSize=15;fontColor=#172335;align=left;" value="~loadScenes(List&amp;lt;Panorama&amp;gt;, List&amp;lt;Scene&amp;gt;, Map&amp;lt;Long, Long&amp;gt;) : void" vertex="1">
+          <mxGeometry height="18.75" width="467.528" x="6" y="203.647" as="geometry" />
+        </mxCell>
+        <mxCell id="Tour-member-10" connectable="0" parent="Tour" style="text;html=1;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;verticalAlign=middle;spacing=0;fontFamily=Segoe UI;fontSize=15;fontColor=#172335;align=left;" value="~scenes() : List&amp;lt;Scene&amp;gt;" vertex="1">
+          <mxGeometry height="18.75" width="160.357" x="6" y="223.598" as="geometry" />
+        </mxCell>
+        <mxCell id="Tour-member-11" connectable="0" parent="Tour" style="text;html=1;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;verticalAlign=middle;spacing=0;fontFamily=Segoe UI;fontSize=15;fontColor=#172335;align=left;" value="-validate(List&amp;lt;Scene&amp;gt;, List&amp;lt;Transition&amp;gt;, List&amp;lt;Panorama&amp;gt;) : TourGraph.Validation" vertex="1">
+          <mxGeometry height="18.75" width="536.398" x="6" y="243.549" as="geometry" />
+        </mxCell>
+        <mxCell id="Tour-member-12" connectable="0" parent="Tour" style="text;html=1;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;verticalAlign=middle;spacing=0;fontFamily=Segoe UI;fontSize=15;fontColor=#172335;align=left;" value="~publish(List&amp;lt;Scene&amp;gt;, List&amp;lt;Transition&amp;gt;, List&amp;lt;Panorama&amp;gt;, List&amp;lt;TourVersion&amp;gt;) : Publication" vertex="1">
+          <mxGeometry height="18.75" width="600.265" x="6" y="263.501" as="geometry" />
+        </mxCell>
+        <mxCell id="Tour-member-13" connectable="0" parent="Tour" style="text;html=1;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;verticalAlign=middle;spacing=0;fontFamily=Segoe UI;fontSize=15;fontColor=#172335;align=left;" value="~snapshot() : Snapshot" vertex="1">
+          <mxGeometry height="18.75" width="156.446" x="6" y="283.452" as="geometry" />
+        </mxCell>
+        <mxCell id="Tour-member-14" connectable="0" parent="Tour" style="text;html=1;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;verticalAlign=middle;spacing=0;fontFamily=Segoe UI;fontSize=15;fontColor=#172335;align=left;" value="&lt;u&gt;-idOrZero(id : Long) : long&lt;/u&gt;" vertex="1">
+          <mxGeometry height="18.75" width="176.764" x="6" y="303.403" as="geometry" />
+        </mxCell>
+        <mxCell id="Tour-member-15" connectable="0" parent="Tour" style="text;html=1;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;verticalAlign=middle;spacing=0;fontFamily=Segoe UI;fontSize=15;fontColor=#172335;align=left;" value="&lt;u&gt;-nextId(previous : long) : long&lt;/u&gt;" vertex="1">
+          <mxGeometry height="18.75" width="198.941" x="6" y="323.354" as="geometry" />
+        </mxCell>
+        <mxCell id="Tour-divider-1" connectable="0" parent="Tour" style="line;strokeColor=#708398;strokeWidth=1;direction=east;movable=0;" value="" vertex="1">
+          <mxGeometry height="1" width="608.265" y="177.609" as="geometry" />
+        </mxCell>
+        <mxCell id="Room" parent="1" style="swimlane;fontFamily=Segoe UI;fontSize=15;fontColor=#172335;html=1;horizontal=1;startSize=49.902;rounded=0;collapsible=0;align=center;verticalAlign=middle;spacing=0;fillColor=#E9F4F1;swimlaneFillColor=#FFFFFF;strokeColor=#708398;strokeWidth=1;whiteSpace=nowrap;" value="&lt;i&gt;«record»&lt;/i&gt;&lt;br&gt;Room" vertex="1">
+          <mxGeometry height="225.512" width="190.601" x="317.5" y="952.043" as="geometry" />
+        </mxCell>
+        <mxCell id="Room-member-1" connectable="0" parent="Room" style="text;html=1;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;verticalAlign=middle;spacing=0;fontFamily=Segoe UI;fontSize=15;fontColor=#172335;align=left;" value="-roomId : Long" vertex="1">
+          <mxGeometry height="18.75" width="103.177" x="6" y="55.989" as="geometry" />
+        </mxCell>
+        <mxCell id="Room-member-2" connectable="0" parent="Room" style="text;html=1;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;verticalAlign=middle;spacing=0;fontFamily=Segoe UI;fontSize=15;fontColor=#172335;align=left;" value="-propertyId : Long" vertex="1">
+          <mxGeometry height="18.75" width="124.505" x="6" y="75.94" as="geometry" />
+        </mxCell>
+        <mxCell id="Room-member-3" connectable="0" parent="Room" style="text;html=1;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;verticalAlign=middle;spacing=0;fontFamily=Segoe UI;fontSize=15;fontColor=#172335;align=left;" value="-name : String" vertex="1">
+          <mxGeometry height="18.75" width="97.574" x="6" y="95.891" as="geometry" />
+        </mxCell>
+        <mxCell id="Room-member-4" connectable="0" parent="Room" style="text;html=1;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;verticalAlign=middle;spacing=0;fontFamily=Segoe UI;fontSize=15;fontColor=#172335;align=left;" value="-synonyms : List&amp;lt;String&amp;gt;" vertex="1">
+          <mxGeometry height="18.75" width="169.286" x="6" y="115.842" as="geometry" />
+        </mxCell>
+        <mxCell id="Room-member-5" connectable="0" parent="Room" style="text;html=1;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;verticalAlign=middle;spacing=0;fontFamily=Segoe UI;fontSize=15;fontColor=#172335;align=left;" value="+roomId() : Long" vertex="1">
+          <mxGeometry height="18.75" width="116.493" x="6" y="143.794" as="geometry" />
+        </mxCell>
+        <mxCell id="Room-member-6" connectable="0" parent="Room" style="text;html=1;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;verticalAlign=middle;spacing=0;fontFamily=Segoe UI;fontSize=15;fontColor=#172335;align=left;" value="+propertyId() : Long" vertex="1">
+          <mxGeometry height="18.75" width="137.821" x="6" y="163.745" as="geometry" />
+        </mxCell>
+        <mxCell id="Room-member-7" connectable="0" parent="Room" style="text;html=1;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;verticalAlign=middle;spacing=0;fontFamily=Segoe UI;fontSize=15;fontColor=#172335;align=left;" value="+name() : String" vertex="1">
+          <mxGeometry height="18.75" width="110.89" x="6" y="183.696" as="geometry" />
+        </mxCell>
+        <mxCell id="Room-member-8" connectable="0" parent="Room" style="text;html=1;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;verticalAlign=middle;spacing=0;fontFamily=Segoe UI;fontSize=15;fontColor=#172335;align=left;" value="+synonyms() : List&amp;lt;String&amp;gt;" vertex="1">
+          <mxGeometry height="18.75" width="182.601" x="6" y="203.647" as="geometry" />
+        </mxCell>
+        <mxCell id="Room-divider-1" connectable="0" parent="Room" style="line;strokeColor=#708398;strokeWidth=1;direction=east;movable=0;" value="" vertex="1">
+          <mxGeometry height="1" width="190.601" y="137.707" as="geometry" />
+        </mxCell>
+        <mxCell id="Panorama" parent="1" style="swimlane;fontFamily=Segoe UI;fontSize=15;fontColor=#172335;html=1;horizontal=1;startSize=29.951;rounded=0;collapsible=0;align=center;verticalAlign=middle;spacing=0;fillColor=#E9F4F1;swimlaneFillColor=#FFFFFF;strokeColor=#708398;strokeWidth=1;whiteSpace=nowrap;" value="&lt;i&gt;Panorama&lt;/i&gt;" vertex="1">
+          <mxGeometry height="205.56" width="316.907" x="318.5" y="1310.543" as="geometry" />
+        </mxCell>
+        <mxCell id="Panorama-member-1" connectable="0" parent="Panorama" style="text;html=1;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;verticalAlign=middle;spacing=0;fontFamily=Segoe UI;fontSize=15;fontColor=#172335;align=left;" value="-panoramaId : Long" vertex="1">
+          <mxGeometry height="18.75" width="134.591" x="6" y="36.038" as="geometry" />
+        </mxCell>
+        <mxCell id="Panorama-member-2" connectable="0" parent="Panorama" style="text;html=1;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;verticalAlign=middle;spacing=0;fontFamily=Segoe UI;fontSize=15;fontColor=#172335;align=left;" value="-propertyId : Long" vertex="1">
+          <mxGeometry height="18.75" width="124.505" x="6" y="55.989" as="geometry" />
+        </mxCell>
+        <mxCell id="Panorama-member-3" connectable="0" parent="Panorama" style="text;html=1;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;verticalAlign=middle;spacing=0;fontFamily=Segoe UI;fontSize=15;fontColor=#172335;align=left;" value="-fileName : String" vertex="1">
+          <mxGeometry height="18.75" width="120.111" x="6" y="75.94" as="geometry" />
+        </mxCell>
+        <mxCell id="Panorama-member-4" connectable="0" parent="Panorama" style="text;html=1;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;verticalAlign=middle;spacing=0;fontFamily=Segoe UI;fontSize=15;fontColor=#172335;align=left;" value="&lt;u&gt;~create(Long, Long, String, String) : Panorama&lt;/u&gt;" vertex="1">
+          <mxGeometry height="18.75" width="308.907" x="6" y="103.891" as="geometry" />
+        </mxCell>
+        <mxCell id="Panorama-member-5" connectable="0" parent="Panorama" style="text;html=1;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;verticalAlign=middle;spacing=0;fontFamily=Segoe UI;fontSize=15;fontColor=#172335;align=left;" value="~panoramaId() : Long" vertex="1">
+          <mxGeometry height="18.75" width="147.906" x="6" y="123.842" as="geometry" />
+        </mxCell>
+        <mxCell id="Panorama-member-6" connectable="0" parent="Panorama" style="text;html=1;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;verticalAlign=middle;spacing=0;fontFamily=Segoe UI;fontSize=15;fontColor=#172335;align=left;" value="~propertyId() : Long" vertex="1">
+          <mxGeometry height="18.75" width="137.821" x="6" y="143.794" as="geometry" />
+        </mxCell>
+        <mxCell id="Panorama-member-7" connectable="0" parent="Panorama" style="text;html=1;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;verticalAlign=middle;spacing=0;fontFamily=Segoe UI;fontSize=15;fontColor=#172335;align=left;" value="~fileName() : String" vertex="1">
+          <mxGeometry height="18.75" width="133.426" x="6" y="163.745" as="geometry" />
+        </mxCell>
+        <mxCell id="Panorama-member-8" connectable="0" parent="Panorama" style="text;html=1;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;verticalAlign=middle;spacing=0;fontFamily=Segoe UI;fontSize=15;fontColor=#172335;align=left;" value="&lt;i&gt;~sceneName() : String&lt;/i&gt;" vertex="1">
+          <mxGeometry height="18.75" width="148.053" x="6" y="183.696" as="geometry" />
+        </mxCell>
+        <mxCell id="Panorama-divider-1" connectable="0" parent="Panorama" style="line;strokeColor=#708398;strokeWidth=1;direction=east;movable=0;" value="" vertex="1">
+          <mxGeometry height="1" width="316.907" y="97.805" as="geometry" />
+        </mxCell>
+        <mxCell id="Hinted" parent="1" style="swimlane;fontFamily=Segoe UI;fontSize=15;fontColor=#172335;html=1;horizontal=1;startSize=29.951;rounded=0;collapsible=0;align=center;verticalAlign=middle;spacing=0;fillColor=#E9F4F1;swimlaneFillColor=#FFFFFF;strokeColor=#708398;strokeWidth=1;whiteSpace=nowrap;" value="Panorama.Hinted" vertex="1">
+          <mxGeometry height="85.853" width="159.092" x="307.5" y="1569.543" as="geometry" />
+        </mxCell>
+        <mxCell id="Hinted-member-1" connectable="0" parent="Hinted" style="text;html=1;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;verticalAlign=middle;spacing=0;fontFamily=Segoe UI;fontSize=15;fontColor=#172335;align=left;" value="-roomHint : String" vertex="1">
+          <mxGeometry height="18.75" width="124.256" x="6" y="36.038" as="geometry" />
+        </mxCell>
+        <mxCell id="Hinted-member-2" connectable="0" parent="Hinted" style="text;html=1;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;verticalAlign=middle;spacing=0;fontFamily=Segoe UI;fontSize=15;fontColor=#172335;align=left;" value="~sceneName() : String" vertex="1">
+          <mxGeometry height="18.75" width="151.092" x="6" y="63.989" as="geometry" />
+        </mxCell>
+        <mxCell id="Hinted-divider-1" connectable="0" parent="Hinted" style="line;strokeColor=#708398;strokeWidth=1;direction=east;movable=0;" value="" vertex="1">
+          <mxGeometry height="1" width="159.092" y="57.902" as="geometry" />
+        </mxCell>
+        <mxCell id="FromFile" parent="1" style="swimlane;fontFamily=Segoe UI;fontSize=15;fontColor=#172335;html=1;horizontal=1;startSize=29.951;rounded=0;collapsible=0;align=center;verticalAlign=middle;spacing=0;fillColor=#E9F4F1;swimlaneFillColor=#FFFFFF;strokeColor=#708398;strokeWidth=1;whiteSpace=nowrap;" value="Panorama.FromFile" vertex="1">
+          <mxGeometry height="57.902" width="159.092" x="544.5" y="1583.543" as="geometry" />
+        </mxCell>
+        <mxCell id="FromFile-member-1" connectable="0" parent="FromFile" style="text;html=1;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;verticalAlign=middle;spacing=0;fontFamily=Segoe UI;fontSize=15;fontColor=#172335;align=left;" value="~sceneName() : String" vertex="1">
+          <mxGeometry height="18.75" width="151.092" x="6" y="36.038" as="geometry" />
+        </mxCell>
+        <mxCell id="Scene" parent="1" style="swimlane;fontFamily=Segoe UI;fontSize=15;fontColor=#172335;html=1;horizontal=1;startSize=49.902;rounded=0;collapsible=0;align=center;verticalAlign=middle;spacing=0;fillColor=#E9F4F1;swimlaneFillColor=#FFFFFF;strokeColor=#708398;strokeWidth=1;whiteSpace=nowrap;" value="&lt;i&gt;«record»&lt;/i&gt;&lt;br&gt;Scene" vertex="1">
+          <mxGeometry height="345.219" width="162.022" x="636" y="892.543" as="geometry" />
+        </mxCell>
+        <mxCell id="Scene-member-1" connectable="0" parent="Scene" style="text;html=1;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;verticalAlign=middle;spacing=0;fontFamily=Segoe UI;fontSize=15;fontColor=#172335;align=left;" value="-sceneId : Long" vertex="1">
+          <mxGeometry height="18.75" width="104.935" x="6" y="55.989" as="geometry" />
+        </mxCell>
+        <mxCell id="Scene-member-2" connectable="0" parent="Scene" style="text;html=1;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;verticalAlign=middle;spacing=0;fontFamily=Segoe UI;fontSize=15;fontColor=#172335;align=left;" value="-tourId : Long" vertex="1">
+          <mxGeometry height="18.75" width="95.04" x="6" y="75.94" as="geometry" />
+        </mxCell>
+        <mxCell id="Scene-member-3" connectable="0" parent="Scene" style="text;html=1;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;verticalAlign=middle;spacing=0;fontFamily=Segoe UI;fontSize=15;fontColor=#172335;align=left;" value="-roomId : Long" vertex="1">
+          <mxGeometry height="18.75" width="103.177" x="6" y="95.891" as="geometry" />
+        </mxCell>
+        <mxCell id="Scene-member-4" connectable="0" parent="Scene" style="text;html=1;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;verticalAlign=middle;spacing=0;fontFamily=Segoe UI;fontSize=15;fontColor=#172335;align=left;" value="-panoramaId : Long" vertex="1">
+          <mxGeometry height="18.75" width="134.591" x="6" y="115.842" as="geometry" />
+        </mxCell>
+        <mxCell id="Scene-member-5" connectable="0" parent="Scene" style="text;html=1;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;verticalAlign=middle;spacing=0;fontFamily=Segoe UI;fontSize=15;fontColor=#172335;align=left;" value="-name : String" vertex="1">
+          <mxGeometry height="18.75" width="97.574" x="6" y="135.794" as="geometry" />
+        </mxCell>
+        <mxCell id="Scene-member-6" connectable="0" parent="Scene" style="text;html=1;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;verticalAlign=middle;spacing=0;fontFamily=Segoe UI;fontSize=15;fontColor=#172335;align=left;" value="-orderIndex : Integer" vertex="1">
+          <mxGeometry height="18.75" width="140.707" x="6" y="155.745" as="geometry" />
+        </mxCell>
+        <mxCell id="Scene-member-7" connectable="0" parent="Scene" style="text;html=1;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;verticalAlign=middle;spacing=0;fontFamily=Segoe UI;fontSize=15;fontColor=#172335;align=left;" value="-isStart : Boolean" vertex="1">
+          <mxGeometry height="18.75" width="116.222" x="6" y="175.696" as="geometry" />
+        </mxCell>
+        <mxCell id="Scene-member-8" connectable="0" parent="Scene" style="text;html=1;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;verticalAlign=middle;spacing=0;fontFamily=Segoe UI;fontSize=15;fontColor=#172335;align=left;" value="+sceneId() : Long" vertex="1">
+          <mxGeometry height="18.75" width="118.251" x="6" y="203.647" as="geometry" />
+        </mxCell>
+        <mxCell id="Scene-member-9" connectable="0" parent="Scene" style="text;html=1;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;verticalAlign=middle;spacing=0;fontFamily=Segoe UI;fontSize=15;fontColor=#172335;align=left;" value="+tourId() : Long" vertex="1">
+          <mxGeometry height="18.75" width="108.356" x="6" y="223.598" as="geometry" />
+        </mxCell>
+        <mxCell id="Scene-member-10" connectable="0" parent="Scene" style="text;html=1;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;verticalAlign=middle;spacing=0;fontFamily=Segoe UI;fontSize=15;fontColor=#172335;align=left;" value="+roomId() : Long" vertex="1">
+          <mxGeometry height="18.75" width="116.493" x="6" y="243.549" as="geometry" />
+        </mxCell>
+        <mxCell id="Scene-member-11" connectable="0" parent="Scene" style="text;html=1;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;verticalAlign=middle;spacing=0;fontFamily=Segoe UI;fontSize=15;fontColor=#172335;align=left;" value="+panoramaId() : Long" vertex="1">
+          <mxGeometry height="18.75" width="147.906" x="6" y="263.501" as="geometry" />
+        </mxCell>
+        <mxCell id="Scene-member-12" connectable="0" parent="Scene" style="text;html=1;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;verticalAlign=middle;spacing=0;fontFamily=Segoe UI;fontSize=15;fontColor=#172335;align=left;" value="+name() : String" vertex="1">
+          <mxGeometry height="18.75" width="110.89" x="6" y="283.452" as="geometry" />
+        </mxCell>
+        <mxCell id="Scene-member-13" connectable="0" parent="Scene" style="text;html=1;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;verticalAlign=middle;spacing=0;fontFamily=Segoe UI;fontSize=15;fontColor=#172335;align=left;" value="+orderIndex() : Integer" vertex="1">
+          <mxGeometry height="18.75" width="154.022" x="6" y="303.403" as="geometry" />
+        </mxCell>
+        <mxCell id="Scene-member-14" connectable="0" parent="Scene" style="text;html=1;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;verticalAlign=middle;spacing=0;fontFamily=Segoe UI;fontSize=15;fontColor=#172335;align=left;" value="+isStart() : Boolean" vertex="1">
+          <mxGeometry height="18.75" width="129.537" x="6" y="323.354" as="geometry" />
+        </mxCell>
+        <mxCell id="Scene-divider-1" connectable="0" parent="Scene" style="line;strokeColor=#708398;strokeWidth=1;direction=east;movable=0;" value="" vertex="1">
+          <mxGeometry height="1" width="162.022" y="197.56" as="geometry" />
+        </mxCell>
+        <mxCell id="Transition" parent="1" style="swimlane;fontFamily=Segoe UI;fontSize=15;fontColor=#172335;html=1;horizontal=1;startSize=49.902;rounded=0;collapsible=0;align=center;verticalAlign=middle;spacing=0;fillColor=#E9F4F1;swimlaneFillColor=#FFFFFF;strokeColor=#708398;strokeWidth=1;whiteSpace=nowrap;" value="&lt;i&gt;«record»&lt;/i&gt;&lt;br&gt;Transition" vertex="1">
+          <mxGeometry height="265.414" width="159.473" x="960.5" y="932.543" as="geometry" />
+        </mxCell>
+        <mxCell id="Transition-member-1" connectable="0" parent="Transition" style="text;html=1;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;verticalAlign=middle;spacing=0;fontFamily=Segoe UI;fontSize=15;fontColor=#172335;align=left;" value="-transitionId : Long" vertex="1">
+          <mxGeometry height="18.75" width="129.874" x="6" y="55.989" as="geometry" />
+        </mxCell>
+        <mxCell id="Transition-member-2" connectable="0" parent="Transition" style="text;html=1;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;verticalAlign=middle;spacing=0;fontFamily=Segoe UI;fontSize=15;fontColor=#172335;align=left;" value="-tourId : Long" vertex="1">
+          <mxGeometry height="18.75" width="95.04" x="6" y="75.94" as="geometry" />
+        </mxCell>
+        <mxCell id="Transition-member-3" connectable="0" parent="Transition" style="text;html=1;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;verticalAlign=middle;spacing=0;fontFamily=Segoe UI;fontSize=15;fontColor=#172335;align=left;" value="-fromSceneId : Long" vertex="1">
+          <mxGeometry height="18.75" width="138.158" x="6" y="95.891" as="geometry" />
+        </mxCell>
+        <mxCell id="Transition-member-4" connectable="0" parent="Transition" style="text;html=1;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;verticalAlign=middle;spacing=0;fontFamily=Segoe UI;fontSize=15;fontColor=#172335;align=left;" value="-toSceneId : Long" vertex="1">
+          <mxGeometry height="18.75" width="120.411" x="6" y="115.842" as="geometry" />
+        </mxCell>
+        <mxCell id="Transition-member-5" connectable="0" parent="Transition" style="text;html=1;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;verticalAlign=middle;spacing=0;fontFamily=Segoe UI;fontSize=15;fontColor=#172335;align=left;" value="-label : String" vertex="1">
+          <mxGeometry height="18.75" width="92.249" x="6" y="135.794" as="geometry" />
+        </mxCell>
+        <mxCell id="Transition-member-6" connectable="0" parent="Transition" style="text;html=1;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;verticalAlign=middle;spacing=0;fontFamily=Segoe UI;fontSize=15;fontColor=#172335;align=left;" value="+transitionId() : Long" vertex="1">
+          <mxGeometry height="18.75" width="143.19" x="6" y="163.745" as="geometry" />
+        </mxCell>
+        <mxCell id="Transition-member-7" connectable="0" parent="Transition" style="text;html=1;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;verticalAlign=middle;spacing=0;fontFamily=Segoe UI;fontSize=15;fontColor=#172335;align=left;" value="+tourId() : Long" vertex="1">
+          <mxGeometry height="18.75" width="108.356" x="6" y="183.696" as="geometry" />
+        </mxCell>
+        <mxCell id="Transition-member-8" connectable="0" parent="Transition" style="text;html=1;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;verticalAlign=middle;spacing=0;fontFamily=Segoe UI;fontSize=15;fontColor=#172335;align=left;" value="+fromSceneId() : Long" vertex="1">
+          <mxGeometry height="18.75" width="151.473" x="6" y="203.647" as="geometry" />
+        </mxCell>
+        <mxCell id="Transition-member-9" connectable="0" parent="Transition" style="text;html=1;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;verticalAlign=middle;spacing=0;fontFamily=Segoe UI;fontSize=15;fontColor=#172335;align=left;" value="+toSceneId() : Long" vertex="1">
+          <mxGeometry height="18.75" width="133.727" x="6" y="223.598" as="geometry" />
+        </mxCell>
+        <mxCell id="Transition-member-10" connectable="0" parent="Transition" style="text;html=1;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;verticalAlign=middle;spacing=0;fontFamily=Segoe UI;fontSize=15;fontColor=#172335;align=left;" value="+label() : String" vertex="1">
+          <mxGeometry height="18.75" width="105.565" x="6" y="243.549" as="geometry" />
+        </mxCell>
+        <mxCell id="Transition-divider-1" connectable="0" parent="Transition" style="line;strokeColor=#708398;strokeWidth=1;direction=east;movable=0;" value="" vertex="1">
+          <mxGeometry height="1" width="159.473" y="157.658" as="geometry" />
+        </mxCell>
+        <mxCell id="TourVersion" parent="1" style="swimlane;fontFamily=Segoe UI;fontSize=15;fontColor=#172335;html=1;horizontal=1;startSize=49.902;rounded=0;collapsible=0;align=center;verticalAlign=middle;spacing=0;fillColor=#E9F4F1;swimlaneFillColor=#FFFFFF;strokeColor=#708398;strokeWidth=1;whiteSpace=nowrap;" value="&lt;i&gt;«record»&lt;/i&gt;&lt;br&gt;TourVersion" vertex="1">
+          <mxGeometry height="265.414" width="177.981" x="798" y="514.543" as="geometry" />
+        </mxCell>
+        <mxCell id="TourVersion-member-1" connectable="0" parent="TourVersion" style="text;html=1;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;verticalAlign=middle;spacing=0;fontFamily=Segoe UI;fontSize=15;fontColor=#172335;align=left;" value="-versionId : Long" vertex="1">
+          <mxGeometry height="18.75" width="114.984" x="6" y="55.989" as="geometry" />
+        </mxCell>
+        <mxCell id="TourVersion-member-2" connectable="0" parent="TourVersion" style="text;html=1;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;verticalAlign=middle;spacing=0;fontFamily=Segoe UI;fontSize=15;fontColor=#172335;align=left;" value="-tourId : Long" vertex="1">
+          <mxGeometry height="18.75" width="95.04" x="6" y="75.94" as="geometry" />
+        </mxCell>
+        <mxCell id="TourVersion-member-3" connectable="0" parent="TourVersion" style="text;html=1;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;verticalAlign=middle;spacing=0;fontFamily=Segoe UI;fontSize=15;fontColor=#172335;align=left;" value="-versionNumber : Long" vertex="1">
+          <mxGeometry height="18.75" width="156.666" x="6" y="95.891" as="geometry" />
+        </mxCell>
+        <mxCell id="TourVersion-member-4" connectable="0" parent="TourVersion" style="text;html=1;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;verticalAlign=middle;spacing=0;fontFamily=Segoe UI;fontSize=15;fontColor=#172335;align=left;" value="-url : String" vertex="1">
+          <mxGeometry height="18.75" width="78.026" x="6" y="115.842" as="geometry" />
+        </mxCell>
+        <mxCell id="TourVersion-member-5" connectable="0" parent="TourVersion" style="text;html=1;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;verticalAlign=middle;spacing=0;fontFamily=Segoe UI;fontSize=15;fontColor=#172335;align=left;" value="-publishedAt : String" vertex="1">
+          <mxGeometry height="18.75" width="140.37" x="6" y="135.793" as="geometry" />
+        </mxCell>
+        <mxCell id="TourVersion-member-6" connectable="0" parent="TourVersion" style="text;html=1;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;verticalAlign=middle;spacing=0;fontFamily=Segoe UI;fontSize=15;fontColor=#172335;align=left;" value="+versionId() : Long" vertex="1">
+          <mxGeometry height="18.75" width="128.299" x="6" y="163.745" as="geometry" />
+        </mxCell>
+        <mxCell id="TourVersion-member-7" connectable="0" parent="TourVersion" style="text;html=1;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;verticalAlign=middle;spacing=0;fontFamily=Segoe UI;fontSize=15;fontColor=#172335;align=left;" value="+tourId() : Long" vertex="1">
+          <mxGeometry height="18.75" width="108.356" x="6" y="183.696" as="geometry" />
+        </mxCell>
+        <mxCell id="TourVersion-member-8" connectable="0" parent="TourVersion" style="text;html=1;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;verticalAlign=middle;spacing=0;fontFamily=Segoe UI;fontSize=15;fontColor=#172335;align=left;" value="+versionNumber() : Long" vertex="1">
+          <mxGeometry height="18.75" width="169.981" x="6" y="203.647" as="geometry" />
+        </mxCell>
+        <mxCell id="TourVersion-member-9" connectable="0" parent="TourVersion" style="text;html=1;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;verticalAlign=middle;spacing=0;fontFamily=Segoe UI;fontSize=15;fontColor=#172335;align=left;" value="+url() : String" vertex="1">
+          <mxGeometry height="18.75" width="91.341" x="6" y="223.598" as="geometry" />
+        </mxCell>
+        <mxCell id="TourVersion-member-10" connectable="0" parent="TourVersion" style="text;html=1;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;verticalAlign=middle;spacing=0;fontFamily=Segoe UI;fontSize=15;fontColor=#172335;align=left;" value="+publishedAt() : String" vertex="1">
+          <mxGeometry height="18.75" width="153.685" x="6" y="243.549" as="geometry" />
+        </mxCell>
+        <mxCell id="TourVersion-divider-1" connectable="0" parent="TourVersion" style="line;strokeColor=#708398;strokeWidth=1;direction=east;movable=0;" value="" vertex="1">
+          <mxGeometry height="1" width="177.981" y="157.658" as="geometry" />
+        </mxCell>
+        <mxCell id="TourGraph" parent="1" style="swimlane;fontFamily=Segoe UI;fontSize=15;fontColor=#172335;html=1;horizontal=1;startSize=29.951;rounded=0;collapsible=0;align=center;verticalAlign=middle;spacing=0;fillColor=#F5ECDF;swimlaneFillColor=#FFFFFF;strokeColor=#708398;strokeWidth=1;whiteSpace=nowrap;" value="TourGraph" vertex="1">
+          <mxGeometry height="97.805" width="575.599" x="281" y="299.543" as="geometry" />
+        </mxCell>
+        <mxCell id="TourGraph-member-1" connectable="0" parent="TourGraph" style="text;html=1;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;verticalAlign=middle;spacing=0;fontFamily=Segoe UI;fontSize=15;fontColor=#172335;align=left;" value="~validate(List&amp;lt;Scene&amp;gt;, List&amp;lt;Transition&amp;gt;, List&amp;lt;Panorama&amp;gt;, long, long) : Validation" vertex="1">
+          <mxGeometry height="18.75" width="540.821" x="6" y="36.038" as="geometry" />
+        </mxCell>
+        <mxCell id="TourGraph-member-2" connectable="0" parent="TourGraph" style="text;html=1;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;verticalAlign=middle;spacing=0;fontFamily=Segoe UI;fontSize=15;fontColor=#172335;align=left;" value="-reachableFrom(adjacent : Map&amp;lt;Long, List&amp;lt;Long&amp;gt;&amp;gt;, startSceneId : long) : Set&amp;lt;Long&amp;gt;" vertex="1">
+          <mxGeometry height="18.75" width="567.599" x="6" y="55.989" as="geometry" />
+        </mxCell>
+        <mxCell id="TourGraph-member-3" connectable="0" parent="TourGraph" style="text;html=1;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;verticalAlign=middle;spacing=0;fontFamily=Segoe UI;fontSize=15;fontColor=#172335;align=left;" value="&lt;u&gt;-displayId(id : Long) : String&lt;/u&gt;" vertex="1">
+          <mxGeometry height="18.75" width="185.846" x="6" y="75.94" as="geometry" />
+        </mxCell>
+        <mxCell id="RoomMatcher" parent="1" style="swimlane;fontFamily=Segoe UI;fontSize=15;fontColor=#172335;html=1;horizontal=1;startSize=29.951;rounded=0;collapsible=0;align=center;verticalAlign=middle;spacing=0;fillColor=#F5ECDF;swimlaneFillColor=#FFFFFF;strokeColor=#708398;strokeWidth=1;whiteSpace=nowrap;" value="RoomMatcher" vertex="1">
+          <mxGeometry height="185.609" width="548.96" x="1054.5" y="554.043" as="geometry" />
+        </mxCell>
+        <mxCell id="RoomMatcher-member-1" connectable="0" parent="RoomMatcher" style="text;html=1;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;verticalAlign=middle;spacing=0;fontFamily=Segoe UI;fontSize=15;fontColor=#172335;align=left;" value="&lt;u&gt;-EXTENSION : Pattern&lt;/u&gt;" vertex="1">
+          <mxGeometry height="18.75" width="146.808" x="6" y="36.038" as="geometry" />
+        </mxCell>
+        <mxCell id="RoomMatcher-member-2" connectable="0" parent="RoomMatcher" style="text;html=1;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;verticalAlign=middle;spacing=0;fontFamily=Segoe UI;fontSize=15;fontColor=#172335;align=left;" value="&lt;u&gt;-WORD : Pattern&lt;/u&gt;" vertex="1">
+          <mxGeometry height="18.75" width="114.024" x="6" y="55.989" as="geometry" />
+        </mxCell>
+        <mxCell id="RoomMatcher-member-3" connectable="0" parent="RoomMatcher" style="text;html=1;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;verticalAlign=middle;spacing=0;fontFamily=Segoe UI;fontSize=15;fontColor=#172335;align=left;" value="-rules : List&amp;lt;MatchingRule&amp;gt;" vertex="1">
+          <mxGeometry height="18.75" width="187.171" x="6" y="75.94" as="geometry" />
+        </mxCell>
+        <mxCell id="RoomMatcher-member-4" connectable="0" parent="RoomMatcher" style="text;html=1;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;verticalAlign=middle;spacing=0;fontFamily=Segoe UI;fontSize=15;fontColor=#172335;align=left;" value="~suggest(panoramas : List&amp;lt;Panorama&amp;gt;, rooms : List&amp;lt;Room&amp;gt;) : List&amp;lt;Suggestion&amp;gt;" vertex="1">
+          <mxGeometry height="18.75" width="540.96" x="6" y="103.891" as="geometry" />
+        </mxCell>
+        <mxCell id="RoomMatcher-member-5" connectable="0" parent="RoomMatcher" style="text;html=1;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;verticalAlign=middle;spacing=0;fontFamily=Segoe UI;fontSize=15;fontColor=#172335;align=left;" value="-suggestOne(panorama : Panorama, rooms : List&amp;lt;PreparedRoom&amp;gt;) : Suggestion" vertex="1">
+          <mxGeometry height="18.75" width="532.45" x="6" y="123.842" as="geometry" />
+        </mxCell>
+        <mxCell id="RoomMatcher-member-6" connectable="0" parent="RoomMatcher" style="text;html=1;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;verticalAlign=middle;spacing=0;fontFamily=Segoe UI;fontSize=15;fontColor=#172335;align=left;" value="-score(name : String, room : PreparedRoom) : int" vertex="1">
+          <mxGeometry height="18.75" width="324.259" x="6" y="143.793" as="geometry" />
+        </mxCell>
+        <mxCell id="RoomMatcher-member-7" connectable="0" parent="RoomMatcher" style="text;html=1;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;verticalAlign=middle;spacing=0;fontFamily=Segoe UI;fontSize=15;fontColor=#172335;align=left;" value="&lt;u&gt;-normalize(value : String) : String&lt;/u&gt;" vertex="1">
+          <mxGeometry height="18.75" width="220.152" x="6" y="163.745" as="geometry" />
+        </mxCell>
+        <mxCell id="RoomMatcher-divider-1" connectable="0" parent="RoomMatcher" style="line;strokeColor=#708398;strokeWidth=1;direction=east;movable=0;" value="" vertex="1">
+          <mxGeometry height="1" width="548.96" y="97.805" as="geometry" />
+        </mxCell>
+        <mxCell id="MatchingRule" parent="1" style="swimlane;fontFamily=Segoe UI;fontSize=15;fontColor=#172335;html=1;horizontal=1;startSize=49.902;rounded=0;collapsible=0;align=center;verticalAlign=middle;spacing=0;fillColor=#F5ECDF;swimlaneFillColor=#FFFFFF;strokeColor=#708398;strokeWidth=1;whiteSpace=nowrap;" value="&lt;i&gt;«interface»&lt;/i&gt;&lt;br&gt;&lt;i&gt;RoomMatcher.MatchingRule&lt;/i&gt;" vertex="1">
+          <mxGeometry height="77.853" width="406.38" x="1198" y="1026.043" as="geometry" />
+        </mxCell>
+        <mxCell id="MatchingRule-member-1" connectable="0" parent="MatchingRule" style="text;html=1;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;verticalAlign=middle;spacing=0;fontFamily=Segoe UI;fontSize=15;fontColor=#172335;align=left;" value="+score(panoramaName : String, room : PreparedRoom) : int" vertex="1">
+          <mxGeometry height="18.75" width="398.38" x="6" y="55.989" as="geometry" />
+        </mxCell>
+        <mxCell id="ExactNameRule" parent="1" style="swimlane;fontFamily=Segoe UI;fontSize=15;fontColor=#172335;html=1;horizontal=1;startSize=29.951;rounded=0;collapsible=0;align=center;verticalAlign=middle;spacing=0;fillColor=#F5ECDF;swimlaneFillColor=#FFFFFF;strokeColor=#708398;strokeWidth=1;whiteSpace=nowrap;" value="RoomMatcher.ExactNameRule" vertex="1">
+          <mxGeometry height="57.902" width="406.38" x="714" y="1384.543" as="geometry" />
+        </mxCell>
+        <mxCell id="ExactNameRule-member-1" connectable="0" parent="ExactNameRule" style="text;html=1;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;verticalAlign=middle;spacing=0;fontFamily=Segoe UI;fontSize=15;fontColor=#172335;align=left;" value="+score(panoramaName : String, room : PreparedRoom) : int" vertex="1">
+          <mxGeometry height="18.75" width="398.38" x="6" y="36.038" as="geometry" />
+        </mxCell>
+        <mxCell id="SynonymRule" parent="1" style="swimlane;fontFamily=Segoe UI;fontSize=15;fontColor=#172335;html=1;horizontal=1;startSize=29.951;rounded=0;collapsible=0;align=center;verticalAlign=middle;spacing=0;fillColor=#F5ECDF;swimlaneFillColor=#FFFFFF;strokeColor=#708398;strokeWidth=1;whiteSpace=nowrap;" value="RoomMatcher.SynonymRule" vertex="1">
+          <mxGeometry height="57.902" width="406.38" x="1198" y="1384.543" as="geometry" />
+        </mxCell>
+        <mxCell id="SynonymRule-member-1" connectable="0" parent="SynonymRule" style="text;html=1;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;verticalAlign=middle;spacing=0;fontFamily=Segoe UI;fontSize=15;fontColor=#172335;align=left;" value="+score(panoramaName : String, room : PreparedRoom) : int" vertex="1">
+          <mxGeometry height="18.75" width="398.38" x="6" y="36.038" as="geometry" />
+        </mxCell>
+        <mxCell id="lnk21" edge="1" parent="1" source="Main" style="noEdgeStyle=1;rounded=0;html=1;strokeColor=#526479;strokeWidth=1.15;dashed=1;dashPattern=7 7;startArrow=none;startFill=0;startSize=11;endArrow=open;endFill=0;endSize=11;exitX=1;exitY=0.501;exitPerimeter=0;entryX=0;entryY=0.501;entryPerimeter=0;" target="TourJson">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1147.33" y="169.543" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lnk22" edge="1" parent="1" source="Main" style="noEdgeStyle=1;rounded=0;html=1;strokeColor=#526479;strokeWidth=1.15;dashed=1;dashPattern=7 7;startArrow=none;startFill=0;startSize=11;endArrow=open;endFill=0;endSize=11;exitX=0.501;exitY=1;exitPerimeter=0;entryX=0.499;entryY=0;entryPerimeter=0;" target="TourWorkflow">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="lnk23" edge="1" parent="1" source="TourJson" style="noEdgeStyle=1;rounded=0;html=1;strokeColor=#526479;strokeWidth=1.15;dashed=1;dashPattern=7 7;startArrow=none;startFill=0;startSize=11;endArrow=open;endFill=0;endSize=11;exitX=0.213;exitY=1;exitPerimeter=0;entryX=0.957;entryY=0;entryPerimeter=0;" target="TourWorkflow">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="lnk23-label-1" connectable="0" parent="lnk23" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Segoe UI;fontSize=15;fontColor=#354B60;spacing=0;labelBackgroundColor=none;" value="Input, Result" vertex="1">
+          <mxGeometry height="19" relative="1" width="86.617" x="-0.275" as="geometry">
+            <mxPoint x="-1.876" y="-3.772" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lnk24" edge="1" parent="1" source="TourWorkflow" style="noEdgeStyle=1;rounded=0;html=1;strokeColor=#526479;strokeWidth=1.15;dashed=1;dashPattern=7 7;startArrow=none;startFill=0;startSize=11;endArrow=open;endFill=0;endSize=11;exitX=0.002;exitY=1;exitPerimeter=0;entryX=1;entryY=0.097;entryPerimeter=0;" target="Tour">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="lnk24-label-1" connectable="0" parent="lnk24" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Segoe UI;fontSize=15;fontColor=#354B60;spacing=0;labelBackgroundColor=none;" value="create" vertex="1">
+          <mxGeometry height="19" relative="1" width="44.547" x="-0.363" as="geometry">
+            <mxPoint x="-0.404" y="-0.89" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lnk25" edge="1" parent="1" source="TourWorkflow" style="noEdgeStyle=1;rounded=0;html=1;strokeColor=#526479;strokeWidth=1.15;dashed=0;dashPattern=7 7;startArrow=none;startFill=0;startSize=11;endArrow=open;endFill=0;endSize=11;exitX=0.729;exitY=1;exitPerimeter=0;entryX=0.33;entryY=0;entryPerimeter=0;" target="RoomMatcher">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="lnk25-label-1" connectable="0" parent="lnk25" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Segoe UI;fontSize=15;fontColor=#354B60;spacing=0;labelBackgroundColor=none;" value="matcher" vertex="1">
+          <mxGeometry height="19" relative="1" width="58.111" x="-0.44" as="geometry">
+            <mxPoint x="9.089" y="-9.202" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lnk26" edge="1" parent="1" source="Tour" style="noEdgeStyle=1;rounded=0;html=1;strokeColor=#526479;strokeWidth=1.15;dashed=0;dashPattern=7 7;startArrow=none;startFill=0;startSize=11;endArrow=open;endFill=0;endSize=11;exitX=0.311;exitY=1;exitPerimeter=0;entryX=0.74;entryY=0;entryPerimeter=0;" target="Property">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="lnk26-label-1" connectable="0" parent="lnk26" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Segoe UI;fontSize=15;fontColor=#354B60;spacing=0;labelBackgroundColor=none;" value="property" vertex="1">
+          <mxGeometry height="19" relative="1" width="61.041" x="-0.701" as="geometry">
+            <mxPoint x="-4.13" y="-2.759" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lnk26-label-2" connectable="0" parent="lnk26" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Segoe UI;fontSize=15;fontColor=#354B60;spacing=0;labelBackgroundColor=none;" value="0..*" vertex="1">
+          <mxGeometry height="19" relative="1" width="24.845" x="-0.766" as="geometry">
+            <mxPoint x="-22.635" y="-15.121" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lnk26-label-3" connectable="0" parent="lnk26" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Segoe UI;fontSize=15;fontColor=#354B60;spacing=0;labelBackgroundColor=none;" value="1" vertex="1">
+          <mxGeometry height="19" relative="1" width="12.086" x="0.854" as="geometry">
+            <mxPoint x="-22.009" y="-14.703" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lnk28" edge="1" parent="1" source="Operator" style="noEdgeStyle=1;rounded=0;html=1;strokeColor=#526479;strokeWidth=1.15;dashed=0;dashPattern=7 7;startArrow=open;startFill=0;startSize=11;endArrow=none;endFill=0;endSize=11;exitX=0.794;exitY=1;exitPerimeter=0;entryX=0.267;entryY=0;entryPerimeter=0;" target="Tour">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="lnk28-label-1" connectable="0" parent="lnk28" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Segoe UI;fontSize=15;fontColor=#354B60;spacing=0;labelBackgroundColor=none;" value="operator" vertex="1">
+          <mxGeometry height="19" relative="1" width="61.385" x="-0.086" as="geometry">
+            <mxPoint x="8.677" y="-7.072" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lnk28-label-2" connectable="0" parent="lnk28" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Segoe UI;fontSize=15;fontColor=#354B60;spacing=0;labelBackgroundColor=none;" value="1" vertex="1">
+          <mxGeometry height="19" relative="1" width="12.086" x="-1" as="geometry">
+            <mxPoint x="-11.488" y="8.043" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lnk28-label-3" connectable="0" parent="lnk28" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Segoe UI;fontSize=15;fontColor=#354B60;spacing=0;labelBackgroundColor=none;" value="0..*" vertex="1">
+          <mxGeometry height="19" relative="1" width="24.845" x="0.028" as="geometry">
+            <mxPoint x="-8.314" y="6.775" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lnk29" edge="1" parent="1" source="Tour" style="noEdgeStyle=1;rounded=0;html=1;strokeColor=#526479;strokeWidth=1.15;dashed=0;dashPattern=7 7;startArrow=diamond;startFill=1;startSize=11;endArrow=none;endFill=0;endSize=11;exitX=0.732;exitY=1;exitPerimeter=0;entryX=0;entryY=0.212;entryPerimeter=0;" target="Scene">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="lnk29-label-1" connectable="0" parent="lnk29" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Segoe UI;fontSize=15;fontColor=#354B60;spacing=0;labelBackgroundColor=none;" value="scenes" vertex="1">
+          <mxGeometry height="19" relative="1" width="47.835" x="-0.516" as="geometry">
+            <mxPoint x="11.346" y="-9.365" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lnk29-label-2" connectable="0" parent="lnk29" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Segoe UI;fontSize=15;fontColor=#354B60;spacing=0;labelBackgroundColor=none;" value="1" vertex="1">
+          <mxGeometry height="19" relative="1" width="12.086" x="-0.952" as="geometry">
+            <mxPoint x="-4.656" y="3.843" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lnk29-label-3" connectable="0" parent="lnk29" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Segoe UI;fontSize=15;fontColor=#354B60;spacing=0;labelBackgroundColor=none;" value="0..*" vertex="1">
+          <mxGeometry height="19" relative="1" width="24.845" x="0.476" as="geometry">
+            <mxPoint x="-9.397" y="7.756" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lnk30" edge="1" parent="1" source="Tour" style="noEdgeStyle=1;rounded=0;html=1;strokeColor=#526479;strokeWidth=1.15;dashed=0;dashPattern=7 7;startArrow=none;startFill=0;startSize=11;endArrow=none;endFill=0;endSize=11;exitX=1;exitY=0.968;exitPerimeter=0;entryX=0;entryY=0.242;entryPerimeter=0;" target="Transition">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="837" y="892.543" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lnk30-label-1" connectable="0" parent="lnk30" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Segoe UI;fontSize=15;fontColor=#354B60;spacing=0;labelBackgroundColor=none;" value="tourId" vertex="1">
+          <mxGeometry height="19" relative="1" width="44.4" x="-0.371" as="geometry">
+            <mxPoint x="6.904" y="-13.077" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lnk30-label-2" connectable="0" parent="lnk30" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Segoe UI;fontSize=15;fontColor=#354B60;spacing=0;labelBackgroundColor=none;" value="1" vertex="1">
+          <mxGeometry height="19" relative="1" width="12.086" x="-1" as="geometry">
+            <mxPoint x="8.233" y="-15.761" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lnk30-label-3" connectable="0" parent="lnk30" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Segoe UI;fontSize=15;fontColor=#354B60;spacing=0;labelBackgroundColor=none;" value="0..*" vertex="1">
+          <mxGeometry height="19" relative="1" width="24.845" x="0.717" as="geometry">
+            <mxPoint x="-3.091" y="3.663" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lnk31" edge="1" parent="1" source="Tour" style="noEdgeStyle=1;rounded=0;html=1;strokeColor=#526479;strokeWidth=1.15;dashed=0;dashPattern=7 7;startArrow=none;startFill=0;startSize=11;endArrow=none;endFill=0;endSize=11;exitX=1;exitY=0.5;exitPerimeter=0;entryX=0;entryY=0.499;entryPerimeter=0;" target="TourVersion">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="lnk31-label-1" connectable="0" parent="lnk31" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Segoe UI;fontSize=15;fontColor=#354B60;spacing=0;labelBackgroundColor=none;" value="tourId" vertex="1">
+          <mxGeometry height="19" relative="1" width="44.4" x="-0.336" as="geometry">
+            <mxPoint y="-23.813" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lnk31-label-2" connectable="0" parent="lnk31" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Segoe UI;fontSize=15;fontColor=#354B60;spacing=0;labelBackgroundColor=none;" value="1" vertex="1">
+          <mxGeometry height="19" relative="1" width="12.086" x="-0.862" as="geometry">
+            <mxPoint y="-20.056" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lnk31-label-3" connectable="0" parent="lnk31" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Segoe UI;fontSize=15;fontColor=#354B60;spacing=0;labelBackgroundColor=none;" value="0..*" vertex="1">
+          <mxGeometry height="19" relative="1" width="24.845" x="0.516" as="geometry">
+            <mxPoint y="-20.636" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lnk33" edge="1" parent="1" source="TourGraph" style="noEdgeStyle=1;rounded=0;html=1;strokeColor=#526479;strokeWidth=1.15;dashed=0;dashPattern=7 7;startArrow=open;startFill=0;startSize=11;endArrow=none;endFill=0;endSize=11;exitX=0.445;exitY=1;exitPerimeter=0;entryX=0.685;entryY=0;entryPerimeter=0;" target="Tour">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="lnk33-label-1" connectable="0" parent="lnk33" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Segoe UI;fontSize=15;fontColor=#354B60;spacing=0;labelBackgroundColor=none;" value="graph" vertex="1">
+          <mxGeometry height="19" relative="1" width="42.987" x="-0.208" as="geometry">
+            <mxPoint x="-0.314" y="-0.205" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lnk34" edge="1" parent="1" source="Property" style="noEdgeStyle=1;rounded=0;html=1;strokeColor=#526479;strokeWidth=1.15;dashed=0;dashPattern=7 7;startArrow=none;startFill=0;startSize=11;endArrow=none;endFill=0;endSize=11;exitX=1;exitY=0.501;exitPerimeter=0;entryX=0;entryY=0.501;entryPerimeter=0;" target="Room">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="lnk34-label-1" connectable="0" parent="lnk34" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Segoe UI;fontSize=15;fontColor=#354B60;spacing=0;labelBackgroundColor=none;" value="propertyId" vertex="1">
+          <mxGeometry height="19" relative="1" width="73.866" x="-0.463" as="geometry">
+            <mxPoint y="-23.813" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lnk34-label-2" connectable="0" parent="lnk34" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Segoe UI;fontSize=15;fontColor=#354B60;spacing=0;labelBackgroundColor=none;" value="1" vertex="1">
+          <mxGeometry height="19" relative="1" width="12.086" x="-0.894" as="geometry">
+            <mxPoint y="-20.692" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lnk34-label-3" connectable="0" parent="lnk34" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Segoe UI;fontSize=15;fontColor=#354B60;spacing=0;labelBackgroundColor=none;" value="0..*" vertex="1">
+          <mxGeometry height="19" relative="1" width="24.845" x="0.613" as="geometry">
+            <mxPoint y="-20.541" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lnk35" edge="1" parent="1" source="Property" style="noEdgeStyle=1;rounded=0;html=1;strokeColor=#526479;strokeWidth=1.15;dashed=0;dashPattern=7 7;startArrow=none;startFill=0;startSize=11;endArrow=none;endFill=0;endSize=11;exitX=0.884;exitY=1;exitPerimeter=0;entryX=0.136;entryY=0;entryPerimeter=0;" target="Panorama">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="279" y="1237.543" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lnk35-label-1" connectable="0" parent="lnk35" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Segoe UI;fontSize=15;fontColor=#354B60;spacing=0;labelBackgroundColor=none;" value="propertyId" vertex="1">
+          <mxGeometry height="19" relative="1" width="73.866" x="0.632" as="geometry">
+            <mxPoint x="10.705" y="-12.104" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lnk35-label-2" connectable="0" parent="lnk35" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Segoe UI;fontSize=15;fontColor=#354B60;spacing=0;labelBackgroundColor=none;" value="1" vertex="1">
+          <mxGeometry height="19" relative="1" width="12.086" x="-0.976" as="geometry">
+            <mxPoint x="-4.481" y="4.758" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lnk35-label-3" connectable="0" parent="lnk35" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Segoe UI;fontSize=15;fontColor=#354B60;spacing=0;labelBackgroundColor=none;" value="0..*" vertex="1">
+          <mxGeometry height="19" relative="1" width="24.845" x="0.651" as="geometry">
+            <mxPoint x="-3.697" y="4.18" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lnk37" edge="1" parent="1" source="Room" style="noEdgeStyle=1;rounded=0;html=1;strokeColor=#526479;strokeWidth=1.15;dashed=0;dashPattern=7 7;startArrow=open;startFill=0;startSize=11;endArrow=none;endFill=0;endSize=11;exitX=1;exitY=0.501;exitPerimeter=0;entryX=0;entryY=0.5;entryPerimeter=0;" target="Scene">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="lnk37-label-1" connectable="0" parent="lnk37" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Segoe UI;fontSize=15;fontColor=#354B60;spacing=0;labelBackgroundColor=none;" value="roomId" vertex="1">
+          <mxGeometry height="19" relative="1" width="52.538" x="-0.372" as="geometry">
+            <mxPoint y="-23.813" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lnk37-label-2" connectable="0" parent="lnk37" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Segoe UI;fontSize=15;fontColor=#354B60;spacing=0;labelBackgroundColor=none;" value="0..1" vertex="1">
+          <mxGeometry height="19" relative="1" width="26.676" x="-0.814" as="geometry">
+            <mxPoint y="-20.403" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lnk37-label-3" connectable="0" parent="lnk37" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Segoe UI;fontSize=15;fontColor=#354B60;spacing=0;labelBackgroundColor=none;" value="0..*" vertex="1">
+          <mxGeometry height="19" relative="1" width="24.845" x="0.548" as="geometry">
+            <mxPoint y="-20.655" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lnk38" edge="1" parent="1" source="Scene" style="noEdgeStyle=1;rounded=0;html=1;strokeColor=#526479;strokeWidth=1.15;dashed=0;dashPattern=7 7;startArrow=none;startFill=0;startSize=11;endArrow=open;endFill=0;endSize=11;exitX=0;exitY=0.842;exitPerimeter=0;entryX=0.723;entryY=0;entryPerimeter=0;" target="Panorama">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="lnk38-label-1" connectable="0" parent="lnk38" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Segoe UI;fontSize=15;fontColor=#354B60;spacing=0;labelBackgroundColor=none;" value="panoramaId" vertex="1">
+          <mxGeometry height="19" relative="1" width="83.951" x="0.295" as="geometry">
+            <mxPoint x="-2.847" y="-1.976" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lnk38-label-2" connectable="0" parent="lnk38" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Segoe UI;fontSize=15;fontColor=#354B60;spacing=0;labelBackgroundColor=none;" value="0..*" vertex="1">
+          <mxGeometry height="19" relative="1" width="24.845" x="-0.887" as="geometry">
+            <mxPoint x="-23.917" y="-16.599" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lnk38-label-3" connectable="0" parent="lnk38" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Segoe UI;fontSize=15;fontColor=#354B60;spacing=0;labelBackgroundColor=none;" value="1" vertex="1">
+          <mxGeometry height="19" relative="1" width="12.086" x="0.603" as="geometry">
+            <mxPoint x="-5.196" y="-3.606" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lnk40" edge="1" parent="1" source="Scene" style="noEdgeStyle=1;rounded=0;html=1;strokeColor=#526479;strokeWidth=1.15;dashed=0;dashPattern=7 7;startArrow=open;startFill=0;startSize=11;endArrow=none;endFill=0;endSize=11;exitX=1;exitY=0.5;exitPerimeter=0;entryX=0;entryY=0.499;entryPerimeter=0;" target="Transition">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="lnk40-label-1" connectable="0" parent="lnk40" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Segoe UI;fontSize=15;fontColor=#354B60;spacing=0;labelBackgroundColor=none;" value="fromSceneId" vertex="1">
+          <mxGeometry height="19" relative="1" width="87.518" x="-0.511" as="geometry">
+            <mxPoint y="-23.813" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lnk40-label-2" connectable="0" parent="lnk40" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Segoe UI;fontSize=15;fontColor=#354B60;spacing=0;labelBackgroundColor=none;" value="1" vertex="1">
+          <mxGeometry height="19" relative="1" width="12.086" x="-0.903" as="geometry">
+            <mxPoint y="-20.655" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lnk40-label-3" connectable="0" parent="lnk40" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Segoe UI;fontSize=15;fontColor=#354B60;spacing=0;labelBackgroundColor=none;" value="0..*" vertex="1">
+          <mxGeometry height="19" relative="1" width="24.845" x="0.646" as="geometry">
+            <mxPoint y="-20.693" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lnk42" edge="1" parent="1" source="Scene" style="noEdgeStyle=1;rounded=0;html=1;strokeColor=#526479;strokeWidth=1.15;dashed=0;dashPattern=7 7;startArrow=open;startFill=0;startSize=11;endArrow=none;endFill=0;endSize=11;exitX=1;exitY=0.544;exitPerimeter=0;entryX=0;entryY=0.556;entryPerimeter=0;" target="Transition">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="845.75" y="1089.043" />
+              <mxPoint x="912.75" y="1089.043" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lnk42-label-1" connectable="0" parent="lnk42" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Segoe UI;fontSize=15;fontColor=#354B60;spacing=0;labelBackgroundColor=none;" value="toSceneId" vertex="1">
+          <mxGeometry height="19" relative="1" width="69.772" x="-0.443" as="geometry">
+            <mxPoint x="3.772" y="-20.298" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lnk42-label-2" connectable="0" parent="lnk42" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Segoe UI;fontSize=15;fontColor=#354B60;spacing=0;labelBackgroundColor=none;" value="1" vertex="1">
+          <mxGeometry height="19" relative="1" width="12.086" x="-0.901" as="geometry">
+            <mxPoint x="-0.001" y="0.003" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lnk42-label-3" connectable="0" parent="lnk42" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Segoe UI;fontSize=15;fontColor=#354B60;spacing=0;labelBackgroundColor=none;" value="0..*" vertex="1">
+          <mxGeometry height="19" relative="1" width="24.845" x="0.652" as="geometry">
+            <mxPoint x="-0.692" y="-3.672" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lnk43" edge="1" parent="1" source="Panorama" style="noEdgeStyle=1;rounded=0;html=1;strokeColor=#526479;strokeWidth=1.15;dashed=0;dashPattern=7 7;startArrow=block;startFill=0;startSize=11;endArrow=none;endFill=0;endSize=11;exitX=0.353;exitY=1;exitPerimeter=0;entryX=0.621;entryY=0;entryPerimeter=0;" target="Hinted">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="lnk44" edge="1" parent="1" source="Panorama" style="noEdgeStyle=1;rounded=0;html=1;strokeColor=#526479;strokeWidth=1.15;dashed=0;dashPattern=7 7;startArrow=block;startFill=0;startSize=11;endArrow=none;endFill=0;endSize=11;exitX=0.741;exitY=1;exitPerimeter=0;entryX=0.368;entryY=0;entryPerimeter=0;" target="FromFile">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="lnk45" edge="1" parent="1" source="RoomMatcher" style="noEdgeStyle=1;rounded=0;html=1;strokeColor=#526479;strokeWidth=1.15;dashed=0;dashPattern=7 7;startArrow=diamond;startFill=1;startSize=11;endArrow=none;endFill=0;endSize=11;exitX=0.529;exitY=1;exitPerimeter=0;entryX=0.483;entryY=0;entryPerimeter=0;" target="MatchingRule">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="lnk45-label-1" connectable="0" parent="lnk45" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Segoe UI;fontSize=15;fontColor=#354B60;spacing=0;labelBackgroundColor=none;" value="rules" vertex="1">
+          <mxGeometry height="19" relative="1" width="35.545" x="-0.256" as="geometry">
+            <mxPoint x="2.667" y="-0.461" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lnk45-label-2" connectable="0" parent="lnk45" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Segoe UI;fontSize=15;fontColor=#354B60;spacing=0;labelBackgroundColor=none;" value="1" vertex="1">
+          <mxGeometry height="19" relative="1" width="12.086" x="-0.951" as="geometry">
+            <mxPoint x="-18.339" y="3.168" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lnk45-label-3" connectable="0" parent="lnk45" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Segoe UI;fontSize=15;fontColor=#354B60;spacing=0;labelBackgroundColor=none;" value="2" vertex="1">
+          <mxGeometry height="19" relative="1" width="12.086" x="0.785" as="geometry">
+            <mxPoint x="-11.653" y="2.013" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lnk46" edge="1" parent="1" source="MatchingRule" style="noEdgeStyle=1;rounded=0;html=1;strokeColor=#526479;strokeWidth=1.15;dashed=1;dashPattern=7 7;startArrow=block;startFill=0;startSize=11;endArrow=none;endFill=0;endSize=11;exitX=0.369;exitY=1;exitPerimeter=0;entryX=0.596;entryY=0;entryPerimeter=0;" target="ExactNameRule">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="lnk47" edge="1" parent="1" source="MatchingRule" style="noEdgeStyle=1;rounded=0;html=1;strokeColor=#526479;strokeWidth=1.15;dashed=1;dashPattern=7 7;startArrow=block;startFill=0;startSize=11;endArrow=none;endFill=0;endSize=11;exitX=0.5;exitY=1;exitPerimeter=0;entryX=0.5;entryY=0;entryPerimeter=0;" target="SynonymRule">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

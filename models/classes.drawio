@@ -50,16 +50,46 @@
           <mxGeometry height="1" width="186.214" y="57.902" as="geometry" />
         </mxCell>
         <mxCell id="Property" parent="1" style="swimlane;fontFamily=Segoe UI;fontSize=15;fontColor=#172335;html=1;horizontal=1;startSize=49.902;rounded=0;collapsible=0;align=center;verticalAlign=middle;spacing=0;fillColor=#E9F4F1;swimlaneFillColor=#FFFFFF;strokeColor=#708398;strokeWidth=1;whiteSpace=nowrap;" value="&lt;i&gt;«record»&lt;/i&gt;&lt;br&gt;Property" vertex="1">
-          <mxGeometry height="105.805" width="145.821" x="23" y="1012.043" as="geometry" />
+          <mxGeometry height="145.805" width="145.821" x="23" y="1012.043" as="geometry" />
         </mxCell>
         <mxCell id="Property-member-1" connectable="0" parent="Property" style="text;html=1;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;verticalAlign=middle;spacing=0;fontFamily=Segoe UI;fontSize=15;fontColor=#172335;align=left;" value="-propertyId : Long" vertex="1">
           <mxGeometry height="18.75" width="124.505" x="6" y="55.989" as="geometry" />
         </mxCell>
         <mxCell id="Property-member-2" connectable="0" parent="Property" style="text;html=1;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;verticalAlign=middle;spacing=0;fontFamily=Segoe UI;fontSize=15;fontColor=#172335;align=left;" value="+propertyId() : Long" vertex="1">
-          <mxGeometry height="18.75" width="137.821" x="6" y="83.94" as="geometry" />
+          <mxGeometry height="18.75" width="137.821" x="6" y="103.94" as="geometry" />
         </mxCell>
         <mxCell id="Property-divider-1" connectable="0" parent="Property" style="line;strokeColor=#708398;strokeWidth=1;direction=east;movable=0;" value="" vertex="1">
-          <mxGeometry height="1" width="145.821" y="77.854" as="geometry" />
+          <mxGeometry height="1" width="145.821" y="97.854" as="geometry" />
+        </mxCell>
+        <mxCell id="Property-realtor-field" connectable="0" parent="Property" style="text;html=1;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;verticalAlign=middle;spacing=0;fontFamily=Segoe UI;fontSize=15;fontColor=#172335;align=left;" value="-realtor : Realtor" vertex="1">
+          <mxGeometry height="18.75" width="137.821" x="6" y="75.989" as="geometry" />
+        </mxCell>
+        <mxCell id="Property-realtor-accessor" connectable="0" parent="Property" style="text;html=1;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;verticalAlign=middle;spacing=0;fontFamily=Segoe UI;fontSize=15;fontColor=#172335;align=left;" value="+realtor() : Realtor" vertex="1">
+          <mxGeometry height="18.75" width="137.821" x="6" y="123.94" as="geometry" />
+        </mxCell>
+        <mxCell id="Realtor" parent="1" style="swimlane;fontFamily=Segoe UI;fontSize=15;fontColor=#172335;html=1;horizontal=1;startSize=49.902;rounded=0;collapsible=0;align=center;verticalAlign=middle;spacing=0;fillColor=#E9F4F1;swimlaneFillColor=#FFFFFF;strokeColor=#708398;strokeWidth=1;whiteSpace=nowrap;" value="&lt;i&gt;«record»&lt;/i&gt;&lt;br&gt;Realtor" vertex="1">
+          <mxGeometry height="185.805" width="200" x="23" y="1280.543" as="geometry" />
+        </mxCell>
+        <mxCell id="Realtor-member-1" connectable="0" parent="Realtor" style="text;html=1;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;verticalAlign=middle;spacing=0;fontFamily=Segoe UI;fontSize=15;fontColor=#172335;align=left;" value="-realtorId : Long" vertex="1">
+          <mxGeometry height="18.75" width="192" x="6" y="55.989" as="geometry" />
+        </mxCell>
+        <mxCell id="Realtor-member-2" connectable="0" parent="Realtor" style="text;html=1;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;verticalAlign=middle;spacing=0;fontFamily=Segoe UI;fontSize=15;fontColor=#172335;align=left;" value="-fullName : String" vertex="1">
+          <mxGeometry height="18.75" width="192" x="6" y="75.989" as="geometry" />
+        </mxCell>
+        <mxCell id="Realtor-member-3" connectable="0" parent="Realtor" style="text;html=1;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;verticalAlign=middle;spacing=0;fontFamily=Segoe UI;fontSize=15;fontColor=#172335;align=left;" value="-contact : String" vertex="1">
+          <mxGeometry height="18.75" width="192" x="6" y="95.989" as="geometry" />
+        </mxCell>
+        <mxCell id="Realtor-member-4" connectable="0" parent="Realtor" style="text;html=1;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;verticalAlign=middle;spacing=0;fontFamily=Segoe UI;fontSize=15;fontColor=#172335;align=left;" value="+realtorId() : Long" vertex="1">
+          <mxGeometry height="18.75" width="192" x="6" y="123.94" as="geometry" />
+        </mxCell>
+        <mxCell id="Realtor-member-5" connectable="0" parent="Realtor" style="text;html=1;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;verticalAlign=middle;spacing=0;fontFamily=Segoe UI;fontSize=15;fontColor=#172335;align=left;" value="+fullName() : String" vertex="1">
+          <mxGeometry height="18.75" width="192" x="6" y="143.94" as="geometry" />
+        </mxCell>
+        <mxCell id="Realtor-member-6" connectable="0" parent="Realtor" style="text;html=1;whiteSpace=nowrap;overflow=visible;strokeColor=none;fillColor=none;verticalAlign=middle;spacing=0;fontFamily=Segoe UI;fontSize=15;fontColor=#172335;align=left;" value="+contact() : String" vertex="1">
+          <mxGeometry height="18.75" width="192" x="6" y="163.94" as="geometry" />
+        </mxCell>
+        <mxCell id="Realtor-divider-1" connectable="0" parent="Realtor" style="line;strokeColor=#708398;strokeWidth=1;direction=east;movable=0;" value="" vertex="1">
+          <mxGeometry height="1" width="200" y="117.854" as="geometry" />
         </mxCell>
         <mxCell id="Operator" parent="1" style="swimlane;fontFamily=Segoe UI;fontSize=15;fontColor=#172335;html=1;horizontal=1;startSize=49.902;rounded=0;collapsible=0;align=center;verticalAlign=middle;spacing=0;fillColor=#E9F4F1;swimlaneFillColor=#FFFFFF;strokeColor=#708398;strokeWidth=1;whiteSpace=nowrap;" value="&lt;i&gt;«record»&lt;/i&gt;&lt;br&gt;Operator" vertex="1">
           <mxGeometry height="105.805" width="146.165" x="57" y="295.543" as="geometry" />
@@ -515,7 +545,7 @@
             <mxPoint x="-0.314" y="-0.205" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="lnk34" edge="1" parent="1" source="Property" style="noEdgeStyle=1;rounded=0;html=1;strokeColor=#526479;strokeWidth=1.15;dashed=0;dashPattern=7 7;startArrow=none;startFill=0;startSize=11;endArrow=none;endFill=0;endSize=11;exitX=1;exitY=0.501;exitPerimeter=0;entryX=0;entryY=0.501;entryPerimeter=0;" target="Room">
+        <mxCell id="lnk34" edge="1" parent="1" source="Property" style="noEdgeStyle=1;rounded=0;html=1;strokeColor=#526479;strokeWidth=1.15;dashed=0;dashPattern=7 7;startArrow=none;startFill=0;startSize=11;endArrow=none;endFill=0;endSize=11;exitX=1;exitY=0.3635;exitPerimeter=0;entryX=0;entryY=0.501;entryPerimeter=0;" target="Room">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="lnk34-label-1" connectable="0" parent="lnk34" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Segoe UI;fontSize=15;fontColor=#354B60;spacing=0;labelBackgroundColor=none;" value="propertyId" vertex="1">
@@ -661,6 +691,24 @@
         </mxCell>
         <mxCell id="lnk47" edge="1" parent="1" source="MatchingRule" style="noEdgeStyle=1;rounded=0;html=1;strokeColor=#526479;strokeWidth=1.15;dashed=1;dashPattern=7 7;startArrow=block;startFill=0;startSize=11;endArrow=none;endFill=0;endSize=11;exitX=0.5;exitY=1;exitPerimeter=0;entryX=0.5;entryY=0;entryPerimeter=0;" target="SynonymRule">
           <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="lnk-property-realtor" edge="1" parent="1" source="Property" target="Realtor" style="noEdgeStyle=1;rounded=0;html=1;strokeColor=#526479;strokeWidth=1.15;startArrow=none;endArrow=open;endFill=0;endSize=11;exitX=0.5;exitY=1;exitPerimeter=0;entryX=0.3645525;entryY=0;entryPerimeter=0;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="lnk-property-realtor-label-1" connectable="0" parent="lnk-property-realtor" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Segoe UI;fontSize=15;fontColor=#354B60;spacing=0;labelBackgroundColor=none;" value="realtor" vertex="1">
+          <mxGeometry height="19" relative="1" width="54" x="0" as="geometry">
+            <mxPoint x="36" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lnk-property-realtor-label-2" connectable="0" parent="lnk-property-realtor" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Segoe UI;fontSize=15;fontColor=#354B60;spacing=0;labelBackgroundColor=none;" value="0..*" vertex="1">
+          <mxGeometry height="19" relative="1" width="32" x="-0.65" as="geometry">
+            <mxPoint x="-42" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lnk-property-realtor-label-3" connectable="0" parent="lnk-property-realtor" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Segoe UI;fontSize=15;fontColor=#354B60;spacing=0;labelBackgroundColor=none;" value="0..1" vertex="1">
+          <mxGeometry height="19" relative="1" width="32" x="0.58" as="geometry">
+            <mxPoint x="-42" as="offset" />
+          </mxGeometry>
         </mxCell>
       </root>
     </mxGraphModel>

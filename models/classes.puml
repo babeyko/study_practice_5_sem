@@ -46,7 +46,18 @@ package tour {
 
     class Property <<record>> #E9F4F1 {
         - propertyId : Long
+        - realtor : Realtor
         + propertyId() : Long
+        + realtor() : Realtor
+    }
+
+    class Realtor <<record>> #E9F4F1 {
+        - realtorId : Long
+        - fullName : String
+        - contact : String
+        + realtorId() : Long
+        + fullName() : String
+        + contact() : String
     }
 
     class Operator <<record>> #E9F4F1 {
@@ -185,6 +196,7 @@ package tour {
     Tour "1" -down- "0..*" Transition : tourId
     Tour "1" -right- "0..*" TourVersion : tourId
     Tour -up-> TourGraph : graph
+    Property "0..*" -down-> "0..1" Realtor : realtor
     Property "1" -right- "0..*" Room : propertyId
     Property "1" -[norank]- "0..*" Panorama : propertyId
     Scene "0..*" -left-> "0..1" Room : roomId
@@ -207,6 +219,5 @@ legend bottom left
   | +, -, ~ | public, private, доступ в пакете |
   | Поля вида ...Id | Связи по идентификаторам в данных |
   | Вложенные записи | Указаны в сигнатурах методов |
-  | Realtor (КТ2) | Сущность логической модели за пределами Java-сценария |
 endlegend
 @enduml

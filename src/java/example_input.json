@@ -1,6 +1,11 @@
 {
   "property_id": 101,
   "operator_id": 7,
+  "realtor": {
+    "realtor_id": 4,
+    "full_name": "Анна Орлова",
+    "contact": "realtor@example.invalid"
+  },
   "rooms": [
     {
       "room_id": 1,

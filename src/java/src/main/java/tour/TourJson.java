@@ -34,8 +34,13 @@ final class TourJson {
                 }
             }
             InputDocument data = gson.fromJson(root, InputDocument.class);
+            Realtor realtor = data.realtor();
+            if (realtor != null && realtor.realtorId() == null) {
+                throw new IllegalArgumentException("Отсутствует обязательное поле realtor.realtor_id");
+            }
             List<Panorama> panoramas = data.panoramas().stream().map(PanoramaEntry::toPanorama).toList();
-            return new TourWorkflow.Input(new Property(data.propertyId()), new Operator(data.operatorId()),
+            return new TourWorkflow.Input(new Property(data.propertyId(), realtor),
+                    new Operator(data.operatorId()),
                     data.rooms(), panoramas, data.tours(), data.scenes(), data.transitions(), data.versions());
         }
     }
@@ -59,7 +64,8 @@ final class TourJson {
         }
     }
 
-    private record InputDocument(Long propertyId, Long operatorId, List<Room> rooms, List<PanoramaEntry> panoramas,
+    private record InputDocument(Long propertyId, Long operatorId, Realtor realtor,
+                                 List<Room> rooms, List<PanoramaEntry> panoramas,
                                  List<Tour.Snapshot> tours, List<Scene> scenes, List<Transition> transitions,
                                  List<TourVersion> versions) {
         InputDocument {

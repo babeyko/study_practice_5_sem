@@ -1,4 +1,4 @@
 package tour;
 
-record Property(Long propertyId) {
+record Property(Long propertyId, Realtor realtor) {
 }

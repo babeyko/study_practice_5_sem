@@ -3,6 +3,7 @@ package tour;
 import com.google.gson.JsonParseException;
 
 import java.io.IOException;
+import java.nio.file.Files;
 import java.nio.file.Path;
 
 public final class Main {
@@ -43,9 +44,15 @@ public final class Main {
             }
         }
 
+        Path inputPath = Path.of(input);
+        Path outputPath = Path.of(output);
+        if (Files.exists(outputPath) && Files.isSameFile(inputPath, outputPath)) {
+            throw new IllegalArgumentException("Входной JSON и результат должны быть разными файлами");
+        }
+
         TourJson json = new TourJson();
-        TourWorkflow.Result result = new TourWorkflow().run(json.read(Path.of(input)));
-        json.write(Path.of(output), result);
+        TourWorkflow.Result result = new TourWorkflow().run(json.read(inputPath));
+        json.write(outputPath, result);
 
         System.out.println("Предложений помещений: " + result.roomSuggestions().size());
         System.out.println("Создано сцен: " + result.scenes().size() + "; проверка: успешно");

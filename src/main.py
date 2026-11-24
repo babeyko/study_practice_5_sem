@@ -8,7 +8,12 @@ from tour_workflow import create_tour_draft, load_panorama_scenes, publish_tour_
 
 
 def run(input_path, output_path):
-    data = json.loads(Path(input_path).read_text(encoding="utf-8"))
+    input_path = Path(input_path)
+    output_path = Path(output_path)
+    if output_path.exists() and input_path.samefile(output_path):
+        raise ValueError("Входной JSON и результат должны быть разными файлами")
+
+    data = json.loads(input_path.read_text(encoding="utf-8"))
     tours = data.setdefault("tours", [])
     scenes = data.setdefault("scenes", [])
     transitions = data.setdefault("transitions", [])
@@ -30,7 +35,7 @@ def run(input_path, output_path):
                                    tour["tour_id"], start_scene_id)
     result = {"room_suggestions": suggestions, "tour": tour, "scenes": created,
               "validation": validation, "published_version": version}
-    Path(output_path).write_text(json.dumps(result, ensure_ascii=False, indent=2), encoding="utf-8")
+    output_path.write_text(json.dumps(result, ensure_ascii=False, indent=2), encoding="utf-8")
     return result
 
 
